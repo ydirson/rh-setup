@@ -573,12 +573,11 @@ fido		60179/udp			# Ifmail
 
 
 # Updated additional list from IANA with all missing services 04/07/2008
-spr-itunes	0/tcp			# Shirt Pocket netTunes
-spl-itunes	0/tcp			# Shirt Pocket launchTunes
+spr-itunes	0/tcp	spl-itunes	# Shirt Pocket netTunes
 compressnet	2/tcp			# Management Utility
 compressnet	2/udp			# Management Utility
-compressnet	3/tcp			# Compression Process
-compressnet	3/udp			# Compression Process
+#compressnet	3/tcp			# Compression Process
+#compressnet	3/udp			# Compression Process
 discard		9/sctp			# Discard
 discard		9/dccp			# Discard SC:DISC
 ftp-data	20/sctp			# FTP
@@ -931,14 +930,10 @@ mftp		349/tcp			# mftp
 mftp		349/udp			# mftp
 matip-type-a	350/tcp			# MATIP Type A
 matip-type-a	350/udp			# MATIP Type A
-matip-type-b	351/tcp			# MATIP Type B
-matip-type-b	351/udp			# MATIP Type B
-bhoetty		351/tcp			# 		bhoetty (added 5/21/97)
-bhoetty		351/udp			# bhoetty
-dtag-ste-sb	352/tcp			# 		DTAG (assigned long ago)
-dtag-ste-sb	352/udp			# 		DTAG
-bhoedap4	352/tcp			# bhoedap4 (added 5/21/97)
-bhoedap4	352/udp			# bhoedap4
+matip-type-b	351/tcp	bhoetty		# MATIP Type B / bhoetty (added 5/21/97)
+matip-type-b	351/udp	bhoetty		# MATIP Type B / bhoetty
+dtag-ste-sb	352/tcp	bhoedap4	# DTAG (assigned long ago) / bhoedap4
+dtag-ste-sb	352/udp	bhoedap4	# DTAG / bhoedap4
 ndsauth		353/tcp			# NDSAUTH
 ndsauth		353/udp			# NDSAUTH
 bh611		354/tcp			# 		bh611
@@ -1297,8 +1292,8 @@ ms-rome		569/tcp			# microsoft rome
 ms-rome		569/udp			# microsoft rome
 meter		570/tcp			# demon
 meter		570/udp			# demon
-meter		571/tcp			# udemon
-meter		571/udp			# udemon
+#meter		571/tcp			# udemon
+#meter		571/udp			# udemon
 sonar		572/tcp			# sonar
 sonar		572/udp			# sonar
 banyan-vip	573/tcp			# banyan-vip
@@ -1469,10 +1464,8 @@ oob-ws-https	664/tcp			# DMTF out-of-band secure web services management protoco
 asf-secure-rmcp 664/udp			# ASF Secure Remote Management and Control Protocol
 sun-dr		665/tcp			# Sun DR
 sun-dr		665/udp			# Sun DR
-mdqs		666/tcp			#
-mdqs		666/udp			#
-doom		666/tcp			# doom Id Software
-doom		666/udp			# doom Id Software
+mdqs		666/tcp	doom		# doom Id Software
+mdqs		666/udp	doom		# doom Id Software
 disclose	667/tcp			# campaign contribution disclosures - SDR Technologies
 disclose	667/udp			# campaign contribution disclosures - SDR Technologies
 mecomm		668/tcp			# MeComm
@@ -1647,8 +1640,8 @@ iclcnet-locate	886/tcp			# ICL coNETion locate server
 iclcnet-locate	886/udp			# ICL coNETion locate server
 iclcnet_svinfo	887/tcp			# ICL coNETion server info
 iclcnet_svinfo	887/udp			# ICL coNETion server info
-accessbuilder	888/tcp			# AccessBuilder
-accessbuilder	888/udp			# AccessBuilder
+#accessbuilder	888/tcp			# AccessBuilder
+#accessbuilder	888/udp			# AccessBuilder
 cddbp		888/tcp			# CD Database Protocol
 omginitialrefs	900/tcp			# OMG Initial Refs
 omginitialrefs	900/udp			# OMG Initial Refs
@@ -1679,8 +1672,8 @@ busboy		998/tcp			#
 puparp		998/udp			#
 garcon		999/tcp			#
 applix		999/udp			# 		Applix ac
-puprouter	999/tcp			#
-puprouter	999/udp			#
+#puprouter	999/tcp			#
+#puprouter	999/udp			#
 cadlock2	1000/tcp		#
 cadlock2	1000/udp		#
 surf		1010/tcp		# surf
@@ -3540,16 +3533,16 @@ tr-rsrb-p2	1988/tcp		# cisco RSRB Priority 2 port
 tr-rsrb-p2	1988/udp		# cisco RSRB Priority 2 port
 tr-rsrb-p3	1989/tcp		# cisco RSRB Priority 3 port
 tr-rsrb-p3	1989/udp		# cisco RSRB Priority 3 port
-mshnet		1989/tcp		# MHSnet system
-mshnet		1989/udp		# MHSnet system
+#mshnet		1989/tcp		# MHSnet system
+#mshnet		1989/udp		# MHSnet system
 stun-p1		1990/tcp		# cisco STUN Priority 1 port
 stun-p1		1990/udp		# cisco STUN Priority 1 port
 stun-p2		1991/tcp		# cisco STUN Priority 2 port
 stun-p2		1991/udp		# cisco STUN Priority 2 port
 stun-p3		1992/tcp		# cisco STUN Priority 3 port
 stun-p3		1992/udp		# cisco STUN Priority 3 port
-ipsendmsg	1992/tcp		# IPsendmsg
-ipsendmsg	1992/udp		# IPsendmsg
+#ipsendmsg	1992/tcp		# IPsendmsg
+#ipsendmsg	1992/udp		# IPsendmsg
 snmp-tcp-port	1993/tcp		# cisco SNMP TCP port
 snmp-tcp-port	1993/udp		# cisco SNMP TCP port
 stun-port	1994/tcp		# cisco serial tunnel port
@@ -4316,8 +4309,8 @@ opequus-server	2400/tcp		# OpEquus Server
 opequus-server	2400/udp		# OpEquus Server
 taskmaster2000	2402/tcp		# TaskMaster 2000 Server
 taskmaster2000	2402/udp		# TaskMaster 2000 Server
-taskmaster2000	2403/tcp		# TaskMaster 2000 Web
-taskmaster2000	2403/udp		# TaskMaster 2000 Web
+#taskmaster2000	2403/tcp		# TaskMaster 2000 Web
+#taskmaster2000	2403/udp		# TaskMaster 2000 Web
 iec-104		2404/tcp		# IEC 60870-5-104 process control over IP
 iec-104		2404/udp		# IEC 60870-5-104 process control over IP
 trc-netpoll	2405/tcp		# TRC Netpoll
@@ -5465,12 +5458,12 @@ remoteware-un	2999/tcp		# RemoteWare Unassigned
 remoteware-un	2999/udp		# RemoteWare Unassigned
 hbci		3000/tcp		# HBCI
 hbci		3000/udp		# HBCI
-remoteware-cl	3000/tcp		# RemoteWare Client
-remoteware-cl	3000/udp		# RemoteWare Client
+#remoteware-cl	3000/tcp		# RemoteWare Client
+#remoteware-cl	3000/udp		# RemoteWare Client
 exlm-agent	3002/tcp		# EXLM Agent
 exlm-agent	3002/udp		# EXLM Agent
-remoteware-srv	3002/tcp		# RemoteWare Server
-remoteware-srv	3002/udp		# RemoteWare Server
+#remoteware-srv	3002/tcp		# RemoteWare Server
+#remoteware-srv	3002/udp		# RemoteWare Server
 cgms		3003/tcp		# CGMS
 cgms		3003/udp		# CGMS
 csoftragent	3004/tcp		# Csoft Agent
@@ -7682,7 +7675,7 @@ agslb		4149/udp		# A10 GSLB Service
 PowerAlert-nsa	4150/tcp		# PowerAlert Network Shutdown Agent
 PowerAlert-nsa	4150/udp		# PowerAlert Network Shutdown Agent
 menandmice_noh	4151/tcp		# Men & Mice Remote Control
-menandmice_noh	4151/tcp		# Men & Mice Remote Control
+menandmice_noh	4151/udp		# Men & Mice Remote Control
 idig_mux	4152/tcp		# iDigTech Multiplex
 idig_mux	4152/udp		# iDigTech Multiplex
 mbl-battd	4153/tcp		# MBL Remote Battery Monitoring
@@ -10108,8 +10101,8 @@ optohost003	22003/tcp		# Opto Host Port 3
 optohost003	22003/udp		# Opto Host Port 3
 optohost004	22004/tcp		# Opto Host Port 4
 optohost004	22004/udp		# Opto Host Port 4
-optohost004	22005/tcp		# Opto Host Port 5
-optohost004	22005/udp		# Opto Host Port 5
+optohost005	22005/tcp		# Opto Host Port 5
+optohost005	22005/udp		# Opto Host Port 5
 cis		22305/udp		# CompactIS Tunnel
 cis-secure	22343/tcp		# CompactIS Secure Tunnel
 cis-secure	22343/udp		# CompactIS Secure Tunnel
@@ -10202,7 +10195,7 @@ tasp-net	25900/udp		# TASP Network Comm
 niobserver	25901/tcp		# NIObserver
 niobserver	25901/udp		# NIObserver
 nilinkanalyst	25902/tcp		# NILinkAnalyst
-nilinkanalyst	25902/tcp		# NILinkAnalyst
+nilinkanalyst	25902/udp		# NILinkAnalyst
 niprobe		25903/tcp		# NIProbe
 niprobe		25903/udp		# NIProbe
 scscp		26133/tcp		# Symbolic Computation Software Composability Protocol
@@ -10366,7 +10359,7 @@ invision-ag	45054/udp		# InVision AG
 eba		45678/tcp		# EBA PRISE
 eba		45678/udp		# EBA PRISE
 qdb2service	45825/tcp		# Qpuncture Data Access Service
-qdb2service	45825/tcp		# Qpuncture Data Access Service
+qdb2service	45825/udp		# Qpuncture Data Access Service
 ssr-servermgr	45966/tcp		# SSRServerMgr
 ssr-servermgr	45966/udp		# SSRServerMgr
 mediabox	46999/tcp		# MediaBox Server

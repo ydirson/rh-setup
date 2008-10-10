@@ -1,7 +1,7 @@
+NAME=setup
+VERSION := $(shell awk '/Version:/ { print $$2 }' $(NAME).spec)
+TAG=$(NAME)-$(VERSION)
 
-VERSION=$(shell awk '/^Version:/ { print $$NF }' setup.spec)
-CVSTAG = r$(subst .,_,$(VERSION))
-CVSROOT:=$(shell cat CVS/Root 2>/dev/null || :)
 
 check:
 	@echo Sanity checking selected files....
@@ -12,22 +12,12 @@ check:
 	./uidgidlint ./uidgid
 	./serviceslint ./services
 
-force-tag-archive: check
-	@cvs -Q tag -F $(CVSTAG)
-
 tag-archive: check
-	@cvs -Q tag -c $(CVSTAG)
+	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
 
 create-archive:
-	@rm -rf /tmp/setup
-	@cd /tmp ; cvs -Q -d $(CVSROOT) export -r$(CVSTAG) setup || echo "Um... export aborted."
-	@mv /tmp/setup /tmp/setup-$(VERSION)
-	@cd /tmp ; tar -c --bzip2 -Spf setup-$(VERSION).tar.bz2 setup-$(VERSION)
-	@rm -rf /tmp/setup-$(VERSION)
-	@cp /tmp/setup-$(VERSION).tar.bz2 .
-	@rm -f /tmp/setup-$(VERSION).tar.bz2
-	@echo ""
-	@echo "The final archive is in setup-$(VERSION).tar.bz2"
+	@git-archive --format=tar --prefix=$(NAME)-$(VERSION)/ HEAD | bzip2 > $(NAME)-$(VERSION).tar.bz2
+	@echo "The archive is at $(NAME)-$(VERSION).tar.bz2"
 
 archive: tag-archive create-archive
 

@@ -24,31 +24,43 @@ while (<FH>) {
 close FH;
 
 # Parse the supplied services file
+my $retval = 0;
 my $line = 0;
 my %service;
 open FH, $ARGV[0] or die "cannot open $ARGV[0]: $!\n";
 while (<FH>) {
 	$line++;				    # Keep a line count
 	chomp;					    # Remove CR/LF chars
-	die "Malformed line $line\n" if m/^\s+/;    # No leading whitespace
+	if (m/^\s+/) {
+		print "Malformed line $line\n";     # No leading whitespace
+		$retval = 1;
+		next;
+	}
 	s/\s*#.*$//;                                # Strip out comments
 	next if m/^$/;				    # Skip empty lines
 	my ($name, $port, $proto, $aliases) =	    # Primary pattern match
 		m/^([\S]+)\s+(\d+)\/(\w+)\s*(.*)/
 		or die "Malformed line: $line\n";
-	warn "Bad protocol at line $line: $proto\n"
-		unless exists $protocol{$proto};
-	warn "Duplicate port at line $line: $port/$proto\n"
-		if exists $service{$proto}{$port};
+	if (not exists $protocol{$proto}) {
+		print "Bad protocol at line $line: $proto\n";
+		$retval = 1;
+	}
+	if (exists $service{$proto}{$port}) {
+		print "Duplicate port at line $line: $port/$proto\n";
+		$retval = 1;
+	}
 	$service{$proto}{$port} = $name;
 	foreach ($name, split /\s+/, $aliases) {
-		warn "Duplicate name at line $line: $_/$proto\n"
-			if exists $service{$proto}{$_};
+		if (exists $service{$proto}{$_}) {
+			print "Duplicate name at line $line: $_/$proto\n";
+			$retval = 1;
+		}
 		$service{$proto}{$_} = $port;
 	};
 	
 }
 close FH;
+exit $retval;
 
 __END__
 
@@ -103,5 +115,5 @@ The services(5) man page describes the file format.
 
 =head1 AUTHOR
 
-Ralph Siemsen
+Ralph Siemsen & Phil Knirsch
 
