@@ -4,6 +4,7 @@ Version: 2.7.4
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
+URL: https://fedorahosted.org/setup
 Source: setup-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -76,6 +77,9 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Fri Oct 10 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.5-1
+- Added upstream URL ;)
+
 * Thu Oct 09 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.4-1
 - Include new serviceslint for speedup (#465642)
 - Cleaned up services due to newly discovered bugs in it with new serviceslint
