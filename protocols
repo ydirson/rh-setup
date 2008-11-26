@@ -1,11 +1,12 @@
 # /etc/protocols:
-# $Id: protocols,v 1.6 2007/05/23 15:55:03 pknirsch Exp $
+# $Id: protocols,v 1.7 2008/11/19 12:27:31 ovasik Exp $
 #
 # Internet (IP) protocols
 #
 #	from: @(#)protocols	5.1 (Berkeley) 4/17/89
 #
 # Updated for NetBSD based on RFC 1340, Assigned Numbers (July 1992).
+# Last IANA update included dated 2008-04-18
 #
 # See also http://www.iana.org/assignments/protocol-numbers
 
@@ -43,7 +44,7 @@ iso-tp4	29	ISO-TP4		# ISO Transport Protocol Class 4
 netblt	30	NETBLT		# Bulk Data Transfer Protocol
 mfe-nsp	31	MFE-NSP		# MFE Network Services Protocol
 merit-inp	32	MERIT-INP	# MERIT Internodal Protocol
-dccp	33	DCCP		# Datagram Congestion Control Protocol  
+dccp	33	DCCP		# Datagram Congestion Control Protocol
 3pc	34	3PC		# Third Party Connect Protocol
 idpr	35	IDPR		# Inter-Domain Policy Routing Protocol
 xtp	36	XTP		# Xpress Tranfer Protocol
@@ -53,7 +54,7 @@ tp++	39	TP++		# TP++ Transport Protocol
 il	40	IL		# IL Transport Protocol
 ipv6	41	IPv6		# IPv6
 sdrp	42	SDRP		# Source Demand Routing Protocol
-ipv6-route	43	IPv6-Route 	# Routing Header for IPv6
+ipv6-route	43	IPv6-Route	# Routing Header for IPv6
 ipv6-frag	44	IPv6-Frag	# Fragment Header for IPv6
 idrp	45	IDRP		# Inter-Domain Routing Protocol
 rsvp	46	RSVP		# Resource ReSerVation Protocol
@@ -61,9 +62,9 @@ gre	47	GRE		# Generic Routing Encapsulation
 dsr	48	DSR		# Dynamic Source Routing Protocol
 bna	49	BNA		# BNA
 esp	50	ESP		# Encap Security Payload
-ipv6-crypt	50	IPv6-Crypt	# Encryption Header for IPv6
+ipv6-crypt	50	IPv6-Crypt	# Encryption Header for IPv6 (not in official list)
 ah	51	AH		# Authentication Header
-ipv6-auth	51	IPv6-Auth	# Authentication Header for IPv6
+ipv6-auth	51	IPv6-Auth	# Authentication Header for IPv6 (not in official list)
 i-nlsp	52	I-NLSP		# Integrated Net Layer Security TUBA
 swipe	53	SWIPE		# IP with Encryption
 narp	54	NARP		# NBMA Address Resolution Protocol
@@ -150,7 +151,9 @@ rsvp-e2e-ignore	134	RSVP-E2E-IGNORE
 #	135			# Mobility Header
 udplite	136	UDPLite
 mpls-in-ip	137	MPLS-in-IP
-#   138-252 Unassigned                                       [IANA]
+manet	138	manet		# MANET Protocols
+hip	139	HIP		# Host Identity Protocol
+#   140-252 Unassigned                                       [IANA]
 #   253     Use for experimentation and testing           [RFC3692]
 #   254     Use for experimentation and testing           [RFC3692]
 #   255                 Reserved                             [IANA]
