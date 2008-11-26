@@ -21,14 +21,16 @@ if ( ! -f $HOME/.inputrc ) then
 	setenv INPUTRC /etc/inputrc
 endif
 
-if ($?prompt) then
-	if ( -d /etc/profile.d ) then
-	        set nonomatch
-	        foreach i ( /etc/profile.d/*.csh )
-	                if ( -r $i ) then
-	                        source $i
-	                endif
-	        end
-	        unset i nonomatch
-	endif
+if ( -d /etc/profile.d ) then
+        set nonomatch
+        foreach i ( /etc/profile.d/*.csh )
+                if ( -r $i ) then
+	                        if ($?prompt) then
+	                              source $i
+	                        else
+	                              source $i >& /dev/null
+	                        endif
+                endif
+        end
+        unset i nonomatch
 endif

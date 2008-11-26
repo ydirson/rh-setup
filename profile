@@ -39,7 +39,7 @@ if [ -x /usr/bin/id ]; then
 	MAIL="/var/spool/mail/$USER"
 fi
 
-HOSTNAME=`/bin/hostname`
+HOSTNAME=`/bin/hostname 2>/dev/null`
 HISTSIZE=1000
 
 if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ]; then
@@ -50,9 +50,15 @@ export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE INPUTRC
 
 for i in /etc/profile.d/*.sh ; do
     if [ -r "$i" ]; then
-    	. $i
+        if [ "$PS1" ]; then
+            . $i
+        else
+            . $i &>/dev/null
+        fi
     fi
 done
+
+export PATH
 
 unset i
 unset pathmunge

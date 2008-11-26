@@ -13,7 +13,7 @@ endif
 if ($?prompt) then
   if ($?tcsh) then
     set promptchars='$#'
-    set prompt='[%u@%m %c]%# ' 
+    set prompt='[%n@%m %c]%# ' 
     # make completion work better by default
     set autolist
   else
@@ -54,15 +54,17 @@ limit coredumpsize 0
 
 # Check if we aren't a loginshell and do stuff if we aren't
 if (! $?loginsh) then
-	if ($?prompt) then
-		if ( -d /etc/profile.d ) then
-	        	set nonomatch
-		        foreach i ( /etc/profile.d/*.csh )
-		                if ( -r $i ) then
-		                        source $i
-		                endif
-		        end
-		        unset i nonomatch
-		endif
-	endif
+    if ( -d /etc/profile.d ) then
+        set nonomatch
+        foreach i ( /etc/profile.d/*.csh )
+            if ( -r $i ) then
+                if ($?prompt) then
+                    source $i
+                else
+                    source $i >&/dev/null
+                endif
+            endif
+        end
+        unset i nonomatch
+    endif
 endif

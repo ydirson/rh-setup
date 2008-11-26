@@ -49,14 +49,18 @@ if ! shopt -q login_shell ; then # We're not a login shell
 		fi
 	}
 
-	# Only run profile.d scripts if we are no login shell and interactive
-	if [ "$PS1" ]; then
-		for i in /etc/profile.d/*.sh; do
-			if [ -r "$i" ]; then
+	# Only display echos from profile.d scripts if we are no login shell
+    # and interactive - otherwise just process them to set envvars
+	for i in /etc/profile.d/*.sh; do
+		if [ -r "$i" ]; then
+			if [ "$PS1" ]; then
 				. $i
+			else
+				. $i &>/dev/null
 			fi
-		done
-	fi
+		fi
+	done
+
 	unset i
 	unset pathmunge
 fi
