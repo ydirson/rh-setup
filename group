@@ -14,8 +14,10 @@ uucp::14:uucp
 man::15:
 games::20:
 gopher::30:
+video::39:
 dip::40:
 ftp::50:
 lock::54:
+audio::63:
 nobody::99:
 users::100:
