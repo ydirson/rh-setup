@@ -81,7 +81,7 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
-* Fri Nov 26 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.5-1
+* Wed Nov 26 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.5-1
 - Added upstream URL ;)
 
 * Wed Nov 19 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.4-3
