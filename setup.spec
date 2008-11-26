@@ -1,15 +1,17 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.7.5
-Release: 1%{?dist}
+Version: 2.7.4
+Release: 3%{?dist}
 License: Public Domain
 Group: System Environment/Base
-URL: https://fedorahosted.org/setup
+URL: http://www.fedorahosted.org/setup/
 Source: setup-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 BuildRequires: bash tcsh perl
-Conflicts: initscripts < 4.26, bash <= 2.0.4-21 
+Conflicts: initscripts < 4.26, bash <= 2.0.4-21
+Patch1: setup-2.7.4.patch
+Patch2: setup-2.7.4-servicesprotocols.patch
 
 %description
 The setup package contains a set of important system configuration and
@@ -17,8 +19,12 @@ setup files, such as passwd, group, and profile.
 
 %prep
 %setup -q
+%patch1 -p1
+%patch2 -p1
 
 %build
+
+%check
 # Run any sanity checks.
 make check
 
@@ -63,10 +69,10 @@ rm -rf %{buildroot}
 %verify(not md5 size mtime) %config(noreplace) /etc/hosts.deny
 %verify(not md5 size mtime) %config(noreplace) /etc/motd
 %config(noreplace) /etc/printcap
-%config /etc/inputrc
+%verify(not md5 size mtime) %config(noreplace) /etc/inputrc
 %config(noreplace) /etc/bashrc
 %config(noreplace) /etc/profile
-%config /etc/protocols
+%verify(not md5 size mtime) %config(noreplace) /etc/protocols
 %attr(0600,root,root) %config(noreplace,missingok) /etc/securetty
 %config(noreplace) /etc/csh.login
 %config(noreplace) /etc/csh.cshrc
@@ -77,8 +83,25 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
-* Fri Oct 10 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.5-1
-- Added upstream URL ;)
+* Wed Nov 19 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.4-3
+- update protocols to latest IANA list (2008-04-18)
+- update services to latest IANA list (2008-11-17)
+- mark /etc/protocols and /etc/inputrc %%config(noreplace)
+- added URL, fixed few rpmlint warnings
+- do own audio and video group (#458843), create it in default
+  /etc/group
+
+* Tue Nov 18 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.4-2
+- again process profile.d scripts in noninteractive shells,
+  but do not display stderr/stdout messages(#457243)
+- fix wrong prompt for csh/tcsh (#443854)
+- don't show error message about missing hostname in profile
+  (#301481)
+- reserve rquotad port 875 in /etc/services (#455859)
+- export PATH after processing profile.d scripts (#449286)
+- assign gid's for audio (:63) and video (:39) group(#458843),
+  assign uidgid pair (52:52) for puppet (#471918)
+- fix /etc/services duplicities to pass serviceslint
 
 * Thu Oct 09 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.4-1
 - Include new serviceslint for speedup (#465642)
@@ -429,7 +452,7 @@ rm -rf %{buildroot}
 - fix inputrc, Yet Again. (#28617)
 
 * Thu Feb 15 2001 Bill Nottingham <notting@redhat.com>
-- add in uidgid file, put it in %doc
+- add in uidgid file, put it in %%doc
 
 * Wed Feb  7 2001 Adrian Havill <havill@redhat.com>
 - bindkey for delete in the case of tcsh
@@ -459,8 +482,8 @@ rm -rf %{buildroot}
   support (postfix >= 20001030-2)
 
 * Sun Aug  6 2000 Bill Nottingham <notting@redhat.com>
-- /var/log/lastlog is %config(noreplace) (#15412)
-- some of the various %verify changes (#14819)
+- /var/log/lastlog is %%config(noreplace) (#15412)
+- some of the various %%verify changes (#14819)
 
 * Thu Aug  3 2000 Nalin Dahyabhai <nalin@redhat.com>
 - linuxconf should be 98, not 99
@@ -583,7 +606,7 @@ rm -rf %{buildroot}
 - /etc/profile uses $i, which needs to be unset
 
 * Mon Nov 03 1997 Donnie Barnes <djb@redhat.com>
-- made /etc/passwd and /etc/group %config(noreplace)
+- made /etc/passwd and /etc/group %%config(noreplace)
 
 * Mon Oct 20 1997 Erik Troan <ewt@redhat.com>
 - removed /etc/inetd.conf, /etc/rpc
