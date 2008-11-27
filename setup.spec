@@ -17,8 +17,6 @@ setup files, such as passwd, group, and profile.
 
 %prep
 %setup -q
-%patch1 -p1
-%patch2 -p1
 
 %build
 
