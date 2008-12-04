@@ -58,7 +58,5 @@ for i in /etc/profile.d/*.sh ; do
     fi
 done
 
-export PATH
-
 unset i
 unset pathmunge
