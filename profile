@@ -42,7 +42,7 @@ fi
 HOSTNAME=`/bin/hostname 2>/dev/null`
 HISTSIZE=1000
 
-export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE INPUTRC
+export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE
 
 for i in /etc/profile.d/*.sh ; do
     if [ -r "$i" ]; then
