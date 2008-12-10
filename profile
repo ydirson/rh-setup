@@ -42,10 +42,6 @@ fi
 HOSTNAME=`/bin/hostname 2>/dev/null`
 HISTSIZE=1000
 
-if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ]; then
-    INPUTRC=/etc/inputrc
-fi
-
 export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE INPUTRC
 
 for i in /etc/profile.d/*.sh ; do

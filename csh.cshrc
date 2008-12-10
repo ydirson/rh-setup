@@ -13,11 +13,11 @@ endif
 if ($?prompt) then
   if ($?tcsh) then
     set promptchars='$#'
-    set prompt='[%n@%m %c]%# ' 
+    set prompt='[%n@%m %c]%# '
     # make completion work better by default
     set autolist
   else
-    set prompt=\[$user@`hostname -s`\]\$\ 
+    set prompt=\[$user@`hostname -s`\]\$\
   endif
 endif
 
@@ -32,7 +32,7 @@ set savehist = (1024 merge)
 
 if ($?prompt) then
   if ($?TERM) then
-    switch($TERM) 
+    switch($TERM)
       case xterm*:
         if ($?tcsh) then
 	  set prompt='%{\033]0;%n@%m:%c\007%}[%n@%m %c]%# '

@@ -17,10 +17,6 @@ endif
 setenv HOSTNAME `/bin/hostname`
 set history=1000
 
-if ( ! -f $HOME/.inputrc ) then
-	setenv INPUTRC /etc/inputrc
-endif
-
 if ( -d /etc/profile.d ) then
         set nonomatch
         foreach i ( /etc/profile.d/*.csh )
