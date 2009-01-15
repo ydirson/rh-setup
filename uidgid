@@ -18,7 +18,7 @@ news	9	13	/var/spool/news		/sbin/nologin	setup
 uucp	10	14	/var/spool/uucp		/sbin/nologin	setup
 operator	11	(0)	/root		/sbin/nologin	setup
 games	12	(100)	/usr/games		/sbin/nologin	setup
-gopher	13	30	/usr/lib/gopher-data	/sbin/nologin	setup
+gopher	13	30	/usr/lib/gopher-data		/sbin/nologin	setup
 ftp	14	50	/var/ftp		/sbin/nologin	setup
 man	-	15	-		-	setup
 pkiuser	17	17	/usr/share/pki		/sbin/nologin	pki-ca,rhpki-ca
@@ -80,7 +80,7 @@ cyrus	76	(12)	/var/imap		/bin/bash	cyrus-imapd
 shadow	-	76	-		-	cyrus-imapd
 arpwatch	77	77	/var/lib/arpwatch		/sbin/nologin	arpwatch
 fax	78	78	/var/spool/fax		/sbin/nologin	mgetty
-nocpulse	79	79	/etc/sysconfig/nocpulse	/bin/bash	nocpulse
+nocpulse	79	79	/etc/sysconfig/nocpulse		/bin/bash	nocpulse
 desktop	80	80	-		/sbin/nologin	desktop-file-utils
 dbus	81	81	/		/sbin/nologin	dbus
 jonas	82	82	/var/lib/jonas		/sbin/nologin	jonas
@@ -98,7 +98,7 @@ exim	93	93	/var/spool/exim		/sbin/nologin	exim
 distcache	94	94	/		/sbin/nologin	distcache
 radiusd	95	95	/		/bin/false	freeradius
 hsqldb	96	96	/var/lib/hsqldb		/sbin/nologin	hsqldb
-dovecot	97	97	/usr/libexec/dovecot	/sbin/nologin	dovecot
+dovecot	97	97	/usr/libexec/dovecot		/sbin/nologin	dovecot
 ident	98	98	/		/sbin/nologin	ident
 nobody	99	99	/		/sbin/nologin	setup
 users	-	100	-		-	setup
