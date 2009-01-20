@@ -10,6 +10,7 @@ lp	4	7	/var/spool/lpd		/sbin/nologin	setup
 mem	-	8	-		-	setup
 kmem	-	9	-		-	setup
 wheel	-	10	-		-	setup
+cdrom	-	11	-		-	udev,MAKEDEV
 sync	5	(0)	/sbin		/bin/sync	setup
 shutdown	6	(0)	/sbin		/sbin/shutdown	setup
 halt	7	(0)	/sbin		/sbin/halt	setup
@@ -36,6 +37,7 @@ rpcuser	29	29	/var/lib/nfs		/bin/false	nfs-utils
 console	-	31	-		-	dev
 rpc	32	32	/		/bin/false	portmap
 amanda	33	(6)	/var/lib/amanda		/bin/false	amanda
+tape	-	33	-		-	udev,MAKEDEV
 netdump	34	34	/var/crash		/bin/bash	netdump-client, netdump-server
 utempter	-	35	-		-	libutempter
 rpm	37	37	/var/lib/rpm		/bin/bash	rpm
@@ -89,6 +91,7 @@ screen	-	84	-		-	screen
 quaggavt	-	85	-		-	quagga
 sabayon	86	86	-		/sbin/nologin	sabayon
 polkituser	87	-	/		/sbin/nologin	PolicyKit
+dialout	-	87	-		-	udev,MAKEDEV
 wbpriv	-	88	-		-	samba-common
 postfix	89	89	/var/spool/postfix		/bin/true	postfix
 postdrop	-	90	-		-	postfix
