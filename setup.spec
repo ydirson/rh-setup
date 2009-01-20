@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.7.5
+Version: 2.7.6
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -79,6 +79,20 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jan 20 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.6-1
+- make uidgid file better parsable (synchronize tabs)
+- reserve gid 11 for group cdrom (udev,MAKEDEV)
+- reserve gid 33 for group tape (udev,MAKEDEV)
+- reserve gid 87 for group dialout (udev,MAKEDEV)
+
+* Thu Dec 18 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.5-3
+- add pkiuser (17:17) to uidgid
+
+* Wed Dec 10 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.5-2
+- do not export PATH twice(#449286 NOTABUG revert)
+- do not export INPUTRC(to respect just created ~/.inputrc)
+  (#443717)
+
 * Wed Nov 26 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.5-1
 - Added upstream URL ;)
 
