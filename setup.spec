@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.7.6
+Version: 2.7.7
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -79,6 +79,13 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Thu Jan 22 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.7-1
+- synchronize /etc/services with latest IANA, do not use
+  tabs in that file to have consistent output
+- fix indentation in /etc/profile and /etc/bashrc
+  (#481074)
+- assign uid 36 for vdsm, gid 36 for kvm
+  (#346151,#481021)
 * Tue Jan 20 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.6-1
 - make uidgid file better parsable (synchronize tabs)
 - reserve gid 11 for group cdrom (udev,MAKEDEV)
