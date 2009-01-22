@@ -16,7 +16,7 @@
 # The Dynamic and/or Private Ports are those from 49152 through 65535
 #
 # Each line describes one service, and is of the form:
-# 
+#
 # service-name  port/protocol  [aliases ...]   [# comment]
 
 tcpmux		1/tcp				# TCP port service multiplexer
@@ -162,7 +162,7 @@ at-zis		206/tcp				# AppleTalk zone information
 at-zis		206/udp
 qmtp		209/tcp				# Quick Mail Transfer Protocol
 qmtp		209/udp				# Quick Mail Transfer Protocol
-z39.50		210/tcp		z3950 wais	# NISO Z39.50 database 
+z39.50		210/tcp		z3950 wais	# NISO Z39.50 database
 z39.50		210/udp		z3950 wais
 ipx		213/tcp				# IPX
 ipx		213/udp
@@ -255,8 +255,8 @@ rquotad  875/tcp      # rquota daemon
 rquotad  875/udp      # rquota daemon
 telnets		992/tcp
 telnets		992/udp
-imaps	 	993/tcp				# IMAP over SSL
-imaps	 	993/udp				# IMAP over SSL
+imaps		993/tcp				# IMAP over SSL
+imaps		993/udp				# IMAP over SSL
 ircs		994/tcp
 ircs		994/udp
 pop3s		995/tcp				# POP-3 over SSL
@@ -324,10 +324,10 @@ bvcontrol	1236/udp			# Daniel J. Walsh
 
 h323hostcallsc	1300/tcp			# H323 Host Call Secure
 h323hostcallsc	1300/udp			# H323 Host Call Secure
-ms-sql-s	1433/tcp			# Microsoft-SQL-Server 
-ms-sql-s	1433/udp			# Microsoft-SQL-Server 
+ms-sql-s	1433/tcp			# Microsoft-SQL-Server
+ms-sql-s	1433/udp			# Microsoft-SQL-Server
 ms-sql-m	1434/tcp			# Microsoft-SQL-Monitor
-ms-sql-m	1434/udp			# Microsoft-SQL-Monitor		 
+ms-sql-m	1434/udp			# Microsoft-SQL-Monitor
 ica		1494/tcp			# Citrix ICA Client
 ica		1494/udp			# Citrix ICA Client
 wins		1512/tcp			# Microsoft's Windows Internet Name Service
@@ -447,8 +447,8 @@ afs3-update     7008/tcp			# server-to-server updater
 afs3-update     7008/udp			# server-to-server updater
 afs3-rmtsys     7009/tcp			# remote cache manager service
 afs3-rmtsys     7009/udp			# remote cache manager service
-sd		9876/tcp   			# Session Director
-sd		9876/udp   			# Session Director
+sd		9876/tcp			# Session Director
+sd		9876/udp			# Session Director
 amanda		10080/tcp			# amanda backup services
 amanda		10080/udp			# amanda backup services
 pgpkeyserver	11371/tcp	hkp		# PGP/GPG public keyserver
@@ -718,7 +718,7 @@ emfis-cntl	141/tcp			# EMFIS Control Service
 emfis-cntl	141/udp			# EMFIS Control Service
 bl-idm		142/tcp			# Britton-Lee IDM
 bl-idm		142/udp			# Britton-Lee IDM
-uma 		144/tcp			# Universal Management Architecture
+uma		144/tcp			# Universal Management Architecture
 uma		144/udp			# Universal Management Architecture
 uaac		145/tcp			# UAAC Protocol
 uaac		145/udp			# UAAC Protocol
@@ -860,10 +860,10 @@ esro-gen	259/tcp			# Efficient Short Remote Operations
 esro-gen	259/udp			# Efficient Short Remote Operations
 openport	260/tcp			# Openport
 openport	260/udp			# Openport
-nsiiops 	261/tcp			# IIOP Name Service over TLS/SSL
+nsiiops		261/tcp			# IIOP Name Service over TLS/SSL
 nsiiops		261/udp			# IIOP Name Service over TLS/SSL
 arcisdms	262/tcp			# Arcisdms
-arcisdms	262/udp			# 		Arcisdms
+arcisdms	262/udp			#	Arcisdms
 hdap		263/tcp			# HDAP
 hdap		263/udp			# HDAP
 bgmp		264/tcp			# BGMP
@@ -880,7 +880,7 @@ manet		269/tcp			# MANET Protocols
 manet		269/udp			# MANET Protocols			[RFC-ietf-manet-iana-07.txt]
 http-mgmt	280/tcp			# http-mgmt
 http-mgmt	280/udp			# http-mgmt
-personal-link	281/tcp			# 			Personal Link
+personal-link	281/tcp			#	Personal Link
 personal-link	281/udp			# Personal Link
 cableport-ax	282/tcp			# Cable Port A/X
 cableport-ax	282/udp			# Cable Port A/X
@@ -896,14 +896,14 @@ novastorbakcup	308/tcp			# Novastor Backup
 novastorbakcup	308/udp			# Novastor Backup
 entrusttime	309/tcp			# EntrustTime
 entrusttime	309/udp			# EntrustTime
-bhmds		310/tcp			# 	bhmds
-bhmds 		310/udp			# 	bhmds
+bhmds		310/tcp			#	bhmds
+bhmds		310/udp			#	bhmds
 asip-webadmin	311/tcp			# AppleShare IP WebAdmin
 asip-webadmin	311/udp			# AppleShare IP WebAdmin
 vslmp		312/tcp			# VSLMP
 vslmp		312/udp			# VSLMP
 magenta-logic	313/tcp			# Magenta Logic
-magenta-logic	313/udp			# 		Magenta Logic
+magenta-logic	313/udp			#	Magenta Logic
 opalis-robot	314/tcp			# Opalis Robot
 opalis-robot	314/udp			# Opalis Robot
 dpsi		315/tcp			# DPSI
@@ -942,13 +942,13 @@ dtag-ste-sb	352/tcp	bhoedap4	# DTAG (assigned long ago) / bhoedap4
 dtag-ste-sb	352/udp	bhoedap4	# DTAG / bhoedap4
 ndsauth		353/tcp			# NDSAUTH
 ndsauth		353/udp			# NDSAUTH
-bh611		354/tcp			# 		bh611
+bh611		354/tcp			#	bh611
 bh611		354/udp			# bh611
-datex-asn	355/tcp			# 		DATEX-ASN
+datex-asn	355/tcp			#	DATEX-ASN
 datex-asn	355/udp			# DATEX-ASN
 cloanto-net-1	356/tcp			# Cloanto Net 1
 cloanto-net-1	356/udp			# Cloanto Net 1
-bhevent		357/tcp			# 		bhevent
+bhevent		357/tcp			#	bhevent
 bhevent		357/udp			# bhevent
 shrinkwrap	358/tcp			# Shrinkwrap
 shrinkwrap	358/udp			# Shrinkwrap
@@ -1255,7 +1255,7 @@ uucp-rlogin	541/udp			# uucp-rlogin
 commerce	542/tcp			# commerce
 commerce	542/udp			# commerce
 klogin		543/udp			#
-kshell 		544/udp			# krcmd
+kshell		544/udp			# krcmd
 appleqtcsrvr	545/tcp			# appleqtcsrvr
 appleqtcsrvr	545/udp			# appleqtcsrvr
 idfp		549/tcp			# IDFP
@@ -1314,25 +1314,25 @@ ipdd		578/udp			# ipdd
 decbsrv		579/tcp			# decbsrv
 decbsrv		579/udp			# decbsrv
 sntp-heartbeat	580/tcp			# SNTP HEARTBEAT
-sntp-heartbeat	580/udp			# 		SNTP HEARTBEAT
+sntp-heartbeat	580/udp			#	SNTP HEARTBEAT
 bdp		581/tcp			# Bundle Discovery Protocol
-bdp		581/udp			# 		Bundle Discovery Protocol
+bdp		581/udp			#	Bundle Discovery Protocol
 scc-security	582/tcp			# SCC Security
-scc-security	582/udp			# 		SCC Security
+scc-security	582/udp			#	SCC Security
 philips-vc	583/tcp			# Philips Video-Conferencing
 philips-vc	583/udp			# Philips Video-Conferencing
 keyserver	584/tcp			# Key Server
-keyserver	584/udp			# 		Key Server
-password-chg 	586/tcp			# Password Change
-password-chg	586/udp			# 		Password Change
+keyserver	584/udp			#	Key Server
+password-chg	586/tcp			# Password Change
+password-chg	586/udp			#	Password Change
 cal		588/tcp			# CAL
 cal		588/udp			# CAL
 eyelink		589/tcp			# EyeLink
-eyelink		589/udp			# 		EyeLink
+eyelink		589/udp			#	EyeLink
 tns-cml		590/tcp			# TNS CML
 tns-cml		590/udp			# TNS CML
 eudora-set	592/tcp			# Eudora Set
-eudora-set	592/udp			# 		Eudora Set
+eudora-set	592/udp			#	Eudora Set
 http-rpc-epmap	593/tcp			# HTTP RPC Ep Map
 http-rpc-epmap	593/udp			# HTTP RPC Ep Map
 tpip		594/tcp			# TPIP
@@ -1368,10 +1368,10 @@ sift-uft	608/udp			# Sender-Initiated/Unsolicited File Transfer
 npmp-trap	609/tcp			# npmp-trap
 npmp-trap	609/udp			# npmp-trap
 hmmp-op		613/tcp			# HMMP Operation
-hmmp-op		613/udp			# 		HMMP Operation
+hmmp-op		613/udp			#	HMMP Operation
 sshell		614/tcp			# SSLshell
-sshell		614/udp			# 			SSLshell
-sco-inetmgr	615/tcp			# 		Internet Configuration Manager
+sshell		614/udp			#	SSLshell
+sco-inetmgr	615/tcp			#	Internet Configuration Manager
 sco-inetmgr	615/udp			# Internet Configuration Manager
 sco-sysmgr	616/tcp		gii	# SCO System Administration Server
 sco-sysmgr	616/udp			# SCO System Administration Server
@@ -1386,7 +1386,7 @@ sco-websrvrmgr	620/udp			# SCO WebServer Manager
 escp-ip		621/tcp			# ESCP
 escp-ip		621/udp			# ESCP
 collaborator	622/tcp			# Collaborator
-collaborator	622/udp			# 		Collaborator
+collaborator	622/udp			#	Collaborator
 oob-ws-http	623/tcp			# DMTF out-of-band web services management protocol
 asf-rmcp	623/udp			# ASF Remote Management and Control Protocol
 cryptoadmin	624/tcp			# Crypto Admin
@@ -1445,8 +1445,8 @@ hello-port	652/tcp			# HELLO_PORT
 hello-port	652/udp			# HELLO_PORT
 repscmd		653/tcp			# RepCmd
 repscmd		653/udp			# RepCmd
-aodv		654/tcp			# 		AODV
-aodv		654/udp			# 		AODV
+aodv		654/tcp			#	AODV
+aodv		654/udp			#	AODV
 tinc		655/tcp			# TINC
 tinc		655/udp			# TINC
 spmp		656/tcp			# SPMP
@@ -1544,7 +1544,7 @@ agentx		705/udp			# AgentX
 silc		706/tcp			# SILC
 silc		706/udp			# SILC
 borland-dsj	707/tcp			# Borland DSJ
-borland-dsj	707/udp			# 		Borland DSJ
+borland-dsj	707/udp			#	Borland DSJ
 entrust-kmsh	709/tcp			# Entrust Key Management Service Handler
 entrust-kmsh	709/udp			# Entrust Key Management Service Handler
 entrust-ash	710/tcp			# Entrust Administration Service Handler
@@ -1579,7 +1579,7 @@ ris-cm		748/udp			# Russell Info Sci Calendar Manager
 qrh		752/tcp			#
 rrh		753/tcp			#
 rrh		753/udp			#
-tell		754/udp			# 		send
+tell		754/udp			#	send
 nlogin		758/tcp			#
 nlogin		758/udp			#
 con		759/tcp			#
@@ -1597,8 +1597,8 @@ vid		769/tcp			#
 vid		769/udp			#
 cadlock		770/tcp			#
 cadlock		770/udp			#
-rtip 		771/tcp			#
-rtip 		771/udp			#
+rtip		771/tcp			#
+rtip		771/udp			#
 cycleserv2	772/tcp			#
 cycleserv2	772/udp			#
 submit		773/tcp			#
@@ -1676,7 +1676,7 @@ maitrd		997/udp			#
 busboy		998/tcp			#
 puparp		998/udp			#
 garcon		999/tcp			#
-applix		999/udp			# 		Applix ac
+applix		999/udp			#	Applix ac
 #puprouter	999/tcp			#
 #puprouter	999/udp			#
 cadlock2	1000/tcp		#
@@ -2873,11 +2873,11 @@ loaprobe	1634/udp		# Log On America Probe
 edb-server1	1635/tcp		# EDB Server 1
 edb-server1	1635/udp		# EDB Server 1
 isdc		1636/tcp		# ISP shared public data control
-isdc 		1636/udp		# ISP shared public data control
-islc 		1637/tcp		# ISP shared local data control
-islc 		1637/udp		# ISP shared local data control
-ismc 		1638/tcp		# ISP shared management control
-ismc 		1638/udp		# ISP shared management control
+isdc		1636/udp		# ISP shared public data control
+islc		1637/tcp		# ISP shared local data control
+islc		1637/udp		# ISP shared local data control
+ismc		1638/tcp		# ISP shared management control
+ismc		1638/udp		# ISP shared management control
 cert-initiator	1639/tcp		# cert-initiator
 cert-initiator	1639/udp		# cert-initiator
 cert-responder	1640/tcp		# cert-responder
@@ -3940,8 +3940,8 @@ b2-runtime	2203/tcp		# b2 Runtime Protocol
 b2-runtime	2203/udp		# b2 Runtime Protocol
 b2-license	2204/tcp		# b2 License Server
 b2-license	2204/udp		# b2 License Server
-jps 		2205/tcp		# Java Presentation Server
-jps 		2205/udp		# Java Presentation Server
+jps		2205/tcp		# Java Presentation Server
+jps		2205/udp		# Java Presentation Server
 hpocbus		2206/tcp		# HP OpenCall bus
 hpocbus		2206/udp		# HP OpenCall bus
 hpssd		2207/tcp		# HP Status and Services
@@ -4027,7 +4027,7 @@ pc-mta-addrmap	2246/udp		# PacketCable MTA Addr Map
 antidotemgrsvr	2247/tcp		# Antidote Deployment Manager Service
 antidotemgrsvr	2247/udp		# Antidote Deployment Manager Service
 ums		2248/tcp		# User Management Service
-ums 		2248/udp		# User Management Service
+ums		2248/udp		# User Management Service
 rfmp		2249/tcp		# RISO File Manager Protocol
 rfmp		2249/udp		# RISO File Manager Protocol
 remote-collab	2250/tcp		# remote-collab
@@ -4303,7 +4303,7 @@ ms-olap2	2394/udp		# MS OLAP 2
 lan900_remote	2395/tcp		# LAN900 Remote
 lan900_remote	2395/udp		# LAN900 Remote
 wusage		2396/tcp		# Wusage
-wusage 		2396/udp		# Wusage
+wusage		2396/udp		# Wusage
 ncl		2397/tcp		# NCL
 ncl		2397/udp		# NCL
 orbiter		2398/tcp		# Orbiter
@@ -5281,7 +5281,7 @@ webmethods-b2b	2907/tcp		# WEBMETHODS B2B
 webmethods-b2b	2907/udp		# WEBMETHODS B2B
 mao		2908/tcp		# mao
 mao		2908/udp		# mao
-funk-dialout 	2909/tcp		# Funk Dialout
+funk-dialout	2909/tcp		# Funk Dialout
 funk-dialout	2909/udp		# Funk Dialout
 tdaccess	2910/tcp		# TDAccess
 tdaccess	2910/udp		# TDAccess
@@ -6012,7 +6012,7 @@ admind		3279/udp		# admind
 vs-server	3280/tcp		# VS Server
 vs-server	3280/udp		# VS Server
 sysopt		3281/tcp		# SYSOPT
-sysopt 		3281/udp		# SYSOPT
+sysopt		3281/udp		# SYSOPT
 datusorb	3282/tcp		# Datusorb
 datusorb	3282/udp		# Datusorb
 net-assistant	3283/tcp		# Net Assistant
@@ -6026,7 +6026,7 @@ e-net		3286/udp		# E-Net
 directvdata	3287/tcp		# DIRECTVDATA
 directvdata	3287/udp		# DIRECTVDATA
 cops		3288/tcp		# COPS
-cops 		3288/udp		# COPS
+cops		3288/udp		# COPS
 enpc		3289/tcp		# ENPC
 enpc		3289/udp		# ENPC
 caps-lm		3290/tcp		# CAPS LOGISTICS TOOLKIT - LM
@@ -6186,7 +6186,7 @@ fujitsu-neat	3382/udp		# Fujitsu Network Enhanced Antitheft function
 esp-lm		3383/tcp		# Enterprise Software Products License Manager
 esp-lm		3383/udp		# Enterprise Software Products License Manager
 hp-clic		3384/tcp		# Cluster Management Services
-hp-clic 	3384/udp		# Hardware Management
+hp-clic		3384/udp		# Hardware Management
 qnxnetman	3385/tcp		# qnxnetman
 qnxnetman	3385/udp		# qnxnetman
 gprs-data	3386/tcp		# GPRS Data
@@ -7350,8 +7350,8 @@ citysearch	3974/tcp		# Remote Applicant Tracking Service
 citysearch	3974/udp		# Remote Applicant Tracking Service
 airshot		3975/tcp		# Air Shot
 airshot		3975/udp		# Air Shot
-opswagent 	3976/tcp		# Opsware Agent
-opswagent 	3976/udp		# Opsware Agent
+opswagent	3976/tcp		# Opsware Agent
+opswagent	3976/udp		# Opsware Agent
 opswmanager	3977/tcp		# Opsware Manager
 opswmanager	3977/udp		# Opsware Manager
 secure-cfg-svr	3978/tcp		# Secured Configuration Server
@@ -7519,7 +7519,7 @@ ice-slocation	4062/tcp		# Ice Location Service (SSL)
 ice-slocation	4062/udp		# Ice Location Service (SSL)
 ice-router	4063/tcp		# Ice Firewall Traversal Service (TCP)
 ice-router	4063/udp		# Ice Firewall Traversal Service (TCP)
-ice-srouter 	4064/tcp		# Ice Firewall Traversal Service (SSL)
+ice-srouter	4064/tcp		# Ice Firewall Traversal Service (SSL)
 ice-srouter	4064/udp		# Ice Firewall Traversal Service (SSL)
 avanti_cdp	4065/tcp		# Avanti Common Data
 avanti_cdp	4065/udp		# Avanti Common Data
@@ -7574,8 +7574,8 @@ sysrqd		4094/tcp		# sysrq daemon
 sysrqd		4094/udp		# sysrq daemon
 xtgui		4095/tcp		# xtgui information service
 xtgui		4095/udp		# xtgui information service
-bre 		4096/tcp		# BRE (Bridge Relay Element)
-bre 		4096/udp		# BRE (Bridge Relay Element)
+bre		4096/tcp		# BRE (Bridge Relay Element)
+bre		4096/udp		# BRE (Bridge Relay Element)
 patrolview	4097/tcp		# Patrol View
 patrolview	4097/udp		# Patrol View
 drmsfsd		4098/tcp		# drmsfsd
@@ -7769,8 +7769,8 @@ fdt-rcatp	4320/tcp		# FDT Remote Categorization Protocol
 fdt-rcatp	4320/udp		# FDT Remote Categorization Protocol
 trim-event	4322/tcp		# TRIM Event Service
 trim-event	4322/udp		# TRIM Event Service
-trim-ice 	4323/tcp		# TRIM ICE Service
-trim-ice 	4323/udp		# TRIM ICE Service
+trim-ice	4323/tcp		# TRIM ICE Service
+trim-ice	4323/udp		# TRIM ICE Service
 balour		4324/tcp		# Balour Game Server
 balour		4324/udp		# Balour Game Server
 geognosisman	4325/tcp		# Cadcorp GeognoSIS Manager Service
@@ -7789,7 +7789,7 @@ lisp-cons	4342/tcp		# LISP-CONS Control
 lisp-control	4342/udp		# LISP Data-Triggered Control
 unicall		4343/tcp		# UNICALL
 unicall		4343/udp		# UNICALL
-vinainstall 	4344/tcp		# VinaInstall
+vinainstall	4344/tcp		# VinaInstall
 vinainstall	4344/udp		# VinaInstall
 m4-network-as	4345/tcp		# Macro 4 Network AS
 m4-network-as	4345/udp		# Macro 4 Network AS
@@ -7872,7 +7872,7 @@ saris		4442/udp		# Saris
 pharos		4443/tcp		# Pharos
 pharos		4443/udp		# Pharos
 upnotifyp	4445/tcp		# UPNOTIFYP
-upnotifyp 	4445/udp		# UPNOTIFYP
+upnotifyp	4445/udp		# UPNOTIFYP
 n1-fwp		4446/tcp		# N1-FWP
 n1-fwp		4446/udp		# N1-FWP
 n1-rmgmt	4447/tcp		# N1-RMGMT
@@ -7887,10 +7887,10 @@ ctisystemmsg	4451/tcp		# CTI System Msg
 ctisystemmsg	4451/udp		# CTI System Msg
 ctiprogramload	4452/tcp		# CTI Program Load
 ctiprogramload	4452/udp		# CTI Program Load
-nssalertmgr 	4453/tcp		# NSS Alert Manager
+nssalertmgr	4453/tcp		# NSS Alert Manager
 nssalertmgr	4453/udp		# NSS Alert Manager
 nssagentmgr	4454/tcp		# NSS Agent Manager
-nssagentmgr 	4454/udp		# NSS Agent Manager
+nssagentmgr	4454/udp		# NSS Agent Manager
 prchat-user	4455/tcp		# PR Chat User
 prchat-user	4455/udp		# PR Chat User
 prchat-server	4456/tcp		# PR Chat Server
@@ -8044,9 +8044,9 @@ solera-lpn	4738/udp		# SoleraTec Locator
 ipfix		4739/tcp		# IP Flow Info Export
 ipfix		4739/udp		# IP Flow Info Export
 ipfix		4739/sctp		# IP Flow Info Export
-ipfixs 		4740/tcp		# ipfix protocol over TLS
-ipfixs 		4740/sctp		# ipfix protocol over DTLS
-ipfixs 		4740/udp		# ipfix protocol over DTLS
+ipfixs		4740/tcp		# ipfix protocol over TLS
+ipfixs		4740/sctp		# ipfix protocol over DTLS
+ipfixs		4740/udp		# ipfix protocol over DTLS
 lumimgrd	4741/tcp		# Luminizer Manager
 lumimgrd	4741/udp		# Luminizer Manager
 sicct		4742/tcp		# SICCT
@@ -8575,7 +8575,7 @@ mctfeed		5598/tcp		# MCT Market Data Feed
 mctfeed		5598/udp		# MCT Market Data Feed
 esinstall	5599/tcp		# Enterprise Security Remote Install
 esinstall	5599/udp		# Enterprise Security Remote Install
-esmmanager 	5600/tcp		# Enterprise Security Manager
+esmmanager	5600/tcp		# Enterprise Security Manager
 esmmanager	5600/udp		# Enterprise Security Manager
 esmagent	5601/tcp		# Enterprise Security Agent
 esmagent	5601/udp		# Enterprise Security Agent
@@ -8626,8 +8626,8 @@ rrac		5678/udp		# Remote Replication Agent Connection
 dccm		5679/tcp		# Direct Cable Connect Manager
 dccm		5679/udp		# Direct Cable Connect Manager
 auriga-router	5680/udp		# Auriga Router Service
-ncxcp 		5681/tcp		# Net-coneX Control Protocol
-ncxcp 		5681/udp		# Net-coneX Control Protocol
+ncxcp		5681/tcp		# Net-coneX Control Protocol
+ncxcp		5681/udp		# Net-coneX Control Protocol
 ggz		5688/tcp		# GGZ Gaming Zone
 ggz		5688/udp		# GGZ Gaming Zone
 qmvideo		5689/tcp		# QM video network management protocol
@@ -8954,9 +8954,9 @@ boks_clntd	6503/tcp		# BoKS Clntd
 boks_clntd	6503/udp		# BoKS Clntd
 badm_priv	6505/tcp		# BoKS Admin Private Port
 badm_priv	6505/udp		# BoKS Admin Private Port
-badm_pub 	6506/tcp		# BoKS Admin Public Port
+badm_pub	6506/tcp		# BoKS Admin Public Port
 badm_pub	6506/udp		# BoKS Admin Public Port
-bdir_priv 	6507/tcp		# BoKS Dir Server, Private Port
+bdir_priv	6507/tcp		# BoKS Dir Server, Private Port
 bdir_priv	6507/udp		# BoKS Dir Server, Private Port
 bdir_pub	6508/tcp		# BoKS Dir Server, Public Port
 bdir_pub	6508/udp		# BoKS Dir Server, Public Port
@@ -9758,7 +9758,7 @@ secure-ts	9318/udp		# PKIX TimeStamp over TLS
 guibase		9321/tcp		# guibase
 guibase		9321/udp		# guibase
 mpidcmgr	9343/tcp		# MpIdcMgr
-mpidcmgr 	9343/udp		# MpIdcMgr
+mpidcmgr	9343/udp		# MpIdcMgr
 mphlpdmc	9344/tcp		# Mphlpdmc
 mphlpdmc	9344/udp		# Mphlpdmc
 ctechlicensing	9346/tcp		# C Tech Licensing
