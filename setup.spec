@@ -1,7 +1,7 @@
 Summary: A set of system configuration and setup files
 Name: setup
 Version: 2.7.7
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: Public Domain
 Group: System Environment/Base
 URL: https://fedorahosted.org/setup/
@@ -79,6 +79,9 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Fri Jan 30 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.7-3
+- add support for ctrl+arrow shortcut in rxvt(#474110)
+
 * Thu Jan 29 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.7-2
 - reserve 87 gid for polkituser (just uid was reserved),
   reserve 18 gid for dialout(to prevent conflicts with
