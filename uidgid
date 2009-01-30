@@ -23,6 +23,7 @@ gopher	13	30	/usr/lib/gopher-data		/sbin/nologin	setup
 ftp	14	50	/var/ftp		/sbin/nologin	setup
 man	-	15	-		-	setup
 pkiuser	17	17	/usr/share/pki		/sbin/nologin	pki-ca,rhpki-ca
+dialout	-	18	-		-	udev,MAKEDEV
 floppy	-	19	-		-	dev,MAKEDEV
 games	-	20	-		-	setup
 slocate	-	21	-		-	slocate
@@ -92,8 +93,7 @@ clamav	83	83	/tmp		/sbin/nologin	clamav
 screen	-	84	-		-	screen
 quaggavt	-	85	-		-	quagga
 sabayon	86	86	-		/sbin/nologin	sabayon
-polkituser	87	-	/		/sbin/nologin	PolicyKit
-dialout	-	87	-		-	udev,MAKEDEV
+polkituser	87	87	/		/sbin/nologin	PolicyKit
 wbpriv	-	88	-		-	samba-common
 postfix	89	89	/var/spool/postfix		/bin/true	postfix
 postdrop	-	90	-		-	postfix
