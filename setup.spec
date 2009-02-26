@@ -96,6 +96,7 @@ rm -rf %{buildroot}
   recognition out-of-the-box) (#486461)
 - added postun section for cleaning of dangerous .rpmnew
   files after updates
+- make profile and bashrc more portable (ksh, #487419)
 
 * Fri Jan 30 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.7-3
 - add support for ctrl+arrow shortcut in rxvt(#474110)

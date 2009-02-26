@@ -56,7 +56,7 @@ if ! shopt -q login_shell ; then # We're not a login shell
             if [ "$PS1" ]; then
                 . $i
             else
-                . $i &>/dev/null
+                . $i >/dev/null 2>&1
             fi
         fi
     done
