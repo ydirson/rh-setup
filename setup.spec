@@ -30,6 +30,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/etc/profile.d
 cp -ar * %{buildroot}/etc
 rm -f %{buildroot}/etc/uidgid
+rm -f %{buildroot}/etc/COPYING
 mkdir -p %{buildroot}/var/log
 touch %{buildroot}/var/log/lastlog
 touch %{buildroot}/etc/environment
