@@ -1,11 +1,11 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.1
+Version: 2.8.2
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
 URL: https://fedorahosted.org/setup/
-Source: setup-%{version}.tar.bz2
+Source0: https://fedorahosted.org/releases/s/e/%{name}/%{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 BuildRequires: bash tcsh perl
@@ -59,7 +59,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc uidgid
+%doc uidgid COPYING
 %verify(not md5 size mtime) %config(noreplace) /etc/passwd
 %verify(not md5 size mtime) %config(noreplace) /etc/group
 %verify(not md5 size mtime) %config(noreplace,missingok) /etc/shadow
@@ -89,6 +89,11 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Mar 24 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.2-1
+- add and ship COPYING file(#226412)
+- fix sources syntax, add sources URL (#226412)
+- update protocols and services to latest IANA
+
 * Thu Feb 26 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.1-1
 - do ship/generate /etc/{shadow,gshadow} files(#483251)
 - do ship default /etc/hosts with setup (#483244)

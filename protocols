@@ -1,12 +1,12 @@
 # /etc/protocols:
-# $Id: protocols,v 1.7 2008/11/19 12:27:31 ovasik Exp $
+# $Id: protocols,v 1.8 2009/03/24 12:27:31 ovasik Exp $
 #
 # Internet (IP) protocols
 #
 #	from: @(#)protocols	5.1 (Berkeley) 4/17/89
 #
 # Updated for NetBSD based on RFC 1340, Assigned Numbers (July 1992).
-# Last IANA update included dated 2008-04-18
+# Last IANA update included dated 2009-03-18
 #
 # See also http://www.iana.org/assignments/protocol-numbers
 
@@ -151,9 +151,10 @@ rsvp-e2e-ignore	134	RSVP-E2E-IGNORE
 #	135			# Mobility Header
 udplite	136	UDPLite
 mpls-in-ip	137	MPLS-in-IP
-manet	138	manet		# MANET Protocols
+manet	138	manet		# MANET Protocols  [RFC5498]
 hip	139	HIP		# Host Identity Protocol
-#   140-252 Unassigned                                       [IANA]
+shim6	140	Shim6		#Shim6 Protocol                           [RFC-ietf-shim6-proto-12.txt]
+#   141-252 Unassigned                                       [IANA]
 #   253     Use for experimentation and testing           [RFC3692]
 #   254     Use for experimentation and testing           [RFC3692]
 #   255                 Reserved                             [IANA]
