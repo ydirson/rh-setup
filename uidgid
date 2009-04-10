@@ -70,6 +70,7 @@ prelude-manager	61	61	-		/sbin/nologin	prelude-manager
 snortd	62	62	-		/sbin/nologin	snortd
 audio	-	63	-		-	setup
 condor	64	64	/var/lib/condor		/sbin/nologin	condord
+nslcd	65	(55)	/		/sbin/nologin	nslcd
 wine	-	66	-		-	wine
 pegasus	66	65	/var/lib/Pegasus		/sbin/nologin	tog-pegasus
 webalizer	67	67	/var/www/html/usage		/sbin/nologin	webalizer
