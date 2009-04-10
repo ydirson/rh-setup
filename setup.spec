@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.2
+Version: 2.8.3
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -90,6 +90,11 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Fri Apr 10 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.3-1
+- do not disable coredumps in profile/csh.cshrc scripts,
+  coredumps already disabled in rawhide's RLIMIT_CORE(#495035)
+- reserve uid 65 for nslcd (will share group 55 ldap, #491899)
+
 * Tue Mar 24 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.2-1
 - add and ship COPYING file(#226412)
 - fix sources syntax, add sources URL (#226412)
