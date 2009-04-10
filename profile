@@ -30,9 +30,6 @@ else
     pathmunge /sbin after
 fi
 
-# No core files by default
-ulimit -S -c 0 > /dev/null 2>&1
-
 if [ -x /usr/bin/id ]; then
     USER="`id -un`"
     LOGNAME=$USER

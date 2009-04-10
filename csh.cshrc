@@ -50,7 +50,6 @@ if ($?prompt) then
 endif
 
 setenv MAIL "/var/spool/mail/$USER"
-limit coredumpsize 0
 
 # Check if we aren't a loginshell and do stuff if we aren't
 if (! $?loginsh) then
