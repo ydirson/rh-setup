@@ -22,6 +22,7 @@ games	12	(100)	/usr/games		/sbin/nologin	setup
 gopher	13	30	/usr/lib/gopher-data		/sbin/nologin	setup
 ftp	14	50	/var/ftp		/sbin/nologin	setup
 man	-	15	-		-	setup
+oprofile	16	16	/home/oprofile		/sbin/nologin	oprofile
 pkiuser	17	17	/usr/share/pki		/sbin/nologin	pki-ca,rhpki-ca
 dialout	-	18	-		-	udev,MAKEDEV
 floppy	-	19	-		-	dev,MAKEDEV

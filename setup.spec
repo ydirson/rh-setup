@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.3
+Version: 2.8.4
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -47,13 +47,13 @@ rm -f %{buildroot}/etc/uidgidlint
 rm -f %{buildroot}/etc/shadowconvert.sh
 rm -f %{buildroot}/etc/setup.spec
 
-%postun
-#throw away useless and dangerous update stuff until rpm will be able to
-#handle it ( http://rpm.org/ticket/6 )
-rm -f /etc/passwd.rpmnew
-rm -f /etc/shadow.rpmnew
-rm -f /etc/group.rpmnew
-rm -f /etc/gshadow.rpmnew
+%postun -p <lua>
+if arg[2] > 1 then
+    for i, name in ipairs({"passwd", "shadow", "group", "gshadow"}) do
+        os.remove("/etc/"..name..".rpmnew")
+    end
+end
+
 
 %clean
 rm -rf %{buildroot}
@@ -90,6 +90,14 @@ rm -rf %{buildroot}
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue May 12 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.4-1
+- add oprofile (16:16) to uidgid
+- improve lua syntax (by Panu Matilainen)
+
+* Wed Apr 22 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.3-2
+- rewrite postun scriptlet to <lua> to prevent /bin/sh
+  dependency
+
 * Fri Apr 10 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.3-1
 - do not disable coredumps in profile/csh.cshrc scripts,
   coredumps already disabled in rawhide's RLIMIT_CORE(#495035)
