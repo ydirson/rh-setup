@@ -47,16 +47,15 @@ rm -f %{buildroot}/etc/uidgidlint
 rm -f %{buildroot}/etc/shadowconvert.sh
 rm -f %{buildroot}/etc/setup.spec
 
-%postun -p <lua>
-if arg[2] > 1 then
-    for i, name in ipairs({"passwd", "shadow", "group", "gshadow"}) do
-        os.remove("/etc/"..name..".rpmnew")
-    end
-end
-
-
 %clean
 rm -rf %{buildroot}
+
+#throw away useless and dangerous update stuff until rpm will be able to
+#handle it ( http://rpm.org/ticket/6 )
+%post -p <lua>
+for i, name in ipairs({"passwd", "shadow", "group", "gshadow"}) do
+     os.remove("/etc/"..name..".rpmnew")
+end
 
 %files
 %defattr(-,root,root)
@@ -92,7 +91,8 @@ rm -rf %{buildroot}
 %changelog
 * Tue May 12 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.4-1
 - add oprofile (16:16) to uidgid
-- improve lua syntax (by Panu Matilainen)
+- use os.remove instead of os.execute in lua post
+  - no dependency on /bin/sh (thanks Panu Matilainen)
 
 * Wed Apr 22 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.3-2
 - rewrite postun scriptlet to <lua> to prevent /bin/sh
@@ -101,12 +101,16 @@ rm -rf %{buildroot}
 * Fri Apr 10 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.3-1
 - do not disable coredumps in profile/csh.cshrc scripts,
   coredumps already disabled in rawhide's RLIMIT_CORE(#495035)
+
+* Wed Mar 25 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.2-2
 - reserve uid 65 for nslcd (will share group 55 ldap, #491899)
 
 * Tue Mar 24 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.2-1
-- add and ship COPYING file(#226412)
+- ship COPYING file, update protocols and services
+  to latest IANA
+
+* Mon Mar 23 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.1-2
 - fix sources syntax, add sources URL (#226412)
-- update protocols and services to latest IANA
 
 * Thu Feb 26 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.1-1
 - do ship/generate /etc/{shadow,gshadow} files(#483251)
@@ -116,6 +120,14 @@ rm -rf %{buildroot}
 - added postun section for cleaning of dangerous .rpmnew
   files after updates
 - make profile and bashrc more portable (ksh, #487419)
+
+* Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.7.7-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
+* Mon Feb 02 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.7-4
+- drop <lua> scriptlet completely(audio/video group
+  temporarily created by packages which use it for
+  updates(#477769))
 
 * Fri Jan 30 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.7-3
 - add support for ctrl+arrow shortcut in rxvt(#474110)
@@ -132,22 +144,29 @@ rm -rf %{buildroot}
   (#481074)
 - assign uid 36 for vdsm, gid 36 for kvm
   (#346151,#481021)
+
 * Tue Jan 20 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.6-1
 - make uidgid file better parsable (synchronize tabs)
 - reserve gid 11 for group cdrom (udev,MAKEDEV)
 - reserve gid 33 for group tape (udev,MAKEDEV)
 - reserve gid 87 for group dialout (udev,MAKEDEV)
 
+* Tue Jan 06 2009 Ondrej Vasik <ovasik@redhat.com> 2.7.5-4
+- use lua language in post to prevent additional
+  dependencies
+
 * Thu Dec 18 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.5-3
 - add pkiuser (17:17) to uidgid
+- temporarily create video/audio group in post section
+  (#476886)
 
 * Wed Dec 10 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.5-2
 - do not export PATH twice(#449286 NOTABUG revert)
 - do not export INPUTRC(to respect just created ~/.inputrc)
   (#443717)
 
-* Wed Nov 26 2008 Phil Knirsch <pknirsch@redhat.com> 2.7.5-1
-- Added upstream URL ;)
+* Thu Nov 27 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.5-1
+- Modified upstream URL, synchronized with upstream git
 
 * Wed Nov 19 2008 Ondrej Vasik <ovasik@redhat.com> 2.7.4-3
 - update protocols to latest IANA list (2008-04-18)
