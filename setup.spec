@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.4
+Version: 2.8.5
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,13 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Wed May 20 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.5-1
+- use history-search-backward/forward for pageup/pagedown
+  mapping in inputrc (#500989)
+- add HISTCONTROL="ignoreboth" to /etc/profile to not include
+  duplicities and lines starting with space into the history
+  (#500819)
+
 * Tue May 12 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.4-1
 - add oprofile (16:16) to uidgid
 - use os.remove instead of os.execute in lua post
