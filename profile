@@ -38,8 +38,9 @@ fi
 
 HOSTNAME=`/bin/hostname 2>/dev/null`
 HISTSIZE=1000
+HISTCONTROL="ignoreboth"
 
-export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE
+export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
 
 for i in /etc/profile.d/*.sh ; do
     if [ -r "$i" ]; then
