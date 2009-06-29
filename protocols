@@ -6,7 +6,7 @@
 #	from: @(#)protocols	5.1 (Berkeley) 4/17/89
 #
 # Updated for NetBSD based on RFC 1340, Assigned Numbers (July 1992).
-# Last IANA update included dated 2009-03-18
+# Last IANA update included dated 2009-06-18
 #
 # See also http://www.iana.org/assignments/protocol-numbers
 

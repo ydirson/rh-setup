@@ -2,7 +2,7 @@
 # $Id: services,v 1.47 2009/06/29 15:12:40 ovasik Exp $
 #
 # Network services, Internet style
-# IANA services version: last updated 2009-03-23
+# IANA services version: last updated 2009-06-19
 #
 # Note that it is presently the policy of IANA to assign a single well-known
 # port number for both TCP and UDP; hence, most entries here have two entries
