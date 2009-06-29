@@ -1,5 +1,5 @@
 # /etc/services:
-# $Id: services,v 1.46 2009/03/23 14:56:28 ovasik Exp $
+# $Id: services,v 1.47 2009/06/29 15:12:40 ovasik Exp $
 #
 # Network services, Internet style
 # IANA services version: last updated 2009-03-23
