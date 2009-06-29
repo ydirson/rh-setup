@@ -153,7 +153,7 @@ udplite	136	UDPLite
 mpls-in-ip	137	MPLS-in-IP
 manet	138	manet		# MANET Protocols  [RFC5498]
 hip	139	HIP		# Host Identity Protocol
-shim6	140	Shim6		#Shim6 Protocol                           [RFC-ietf-shim6-proto-12.txt]
+shim6	140	Shim6		#Shim6 Protocol                         [RFC5533]
 #   141-252 Unassigned                                       [IANA]
 #   253     Use for experimentation and testing           [RFC3692]
 #   254     Use for experimentation and testing           [RFC3692]
