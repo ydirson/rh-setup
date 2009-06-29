@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.5
+Version: 2.8.6
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Mon Jun 29 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.6-1
+- update protocols and services to latest IANA
+- add example for tty in prompt(#503304)
+
 * Wed May 20 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.5-1
 - use history-search-backward/forward for pageup/pagedown
   mapping in inputrc (#500989)

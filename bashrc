@@ -3,6 +3,11 @@
 # System wide functions and aliases
 # Environment stuff goes in /etc/profile
 
+# It's NOT good idea to change this file unless you know what you
+# are doing. Much better way is to create custom.sh shell script in
+# /etc/profile.d/ to make custom changes to environment. This will
+# prevent need for merging in future updates.
+
 # By default, we want this to get set.
 # Even for non-interactive, non-login shells.
 if [ $UID -gt 99 ] && [ "`id -gn`" = "`id -un`" ]; then
@@ -35,6 +40,13 @@ if [ "$PS1" ]; then
     # Turn on checkwinsize
     shopt -s checkwinsize
     [ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
+    # You might want to have e.g. tty in prompt (e.g. more virtual machines)
+    # and console windows
+    # If you want to do so, just add e.g.
+    # if [ "$PS1" ]; then
+    #   PS1="[\u@\h:\l \W]\\$ "
+    # fi
+    # to your custom modification shell script in /etc/profile.d/ directory
 fi
 
 if ! shopt -q login_shell ; then # We're not a login shell

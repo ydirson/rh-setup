@@ -3,6 +3,11 @@
 # System wide environment and startup programs, for login setup
 # Functions and aliases go in /etc/bashrc
 
+# It's NOT good idea to change this file unless you know what you
+# are doing. Much better way is to create custom.sh shell script in
+# /etc/profile.d/ to make custom changes to environment. This will
+# prevent need for merging in future updates.
+
 pathmunge () {
     if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
        if [ "$2" = "after" ] ; then
