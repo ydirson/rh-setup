@@ -43,7 +43,7 @@ tape	-	33	-		-	udev,MAKEDEV
 netdump	34	34	/var/crash		/bin/bash	netdump-client, netdump-server
 utempter	-	35	-		-	libutempter
 vdsm	36	-	/		/bin/bash	kvm, vdsm
-kvm	-	36	-		-	kvm, vdsm
+kvm	-	36	-		-	kvm, vdsm, libvirt
 rpm	37	37	/var/lib/rpm		/bin/bash	rpm
 ntp	38	38	/etc/ntp		/sbin/nologin	ntp
 video	-	39	-		-	setup
@@ -109,6 +109,7 @@ dovecot	97	97	/usr/libexec/dovecot		/sbin/nologin	dovecot
 ident	98	98	/		/sbin/nologin	ident
 nobody	99	99	/		/sbin/nologin	setup
 users	-	100	-		-	setup
+qemu	107	107	/		/sbin/nologin	libvirt
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
