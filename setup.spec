@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.6
+Version: 2.8.7
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,13 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jul 21 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.7-1
+- increase threshold for uidgid reservations to 200
+- reserve uidgid pair 107:107 for qemu (libvirt,#511957)
+- reflect threshold in profile and bashrc, do inform about
+  uidgid file existence there
+- remove old remnants about portmap from hosts.deny(#509919)
+
 * Mon Jun 29 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.6-1
 - update protocols and services to latest IANA
 - add example for tty in prompt(#503304)
