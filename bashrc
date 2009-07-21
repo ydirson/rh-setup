@@ -10,7 +10,10 @@
 
 # By default, we want this to get set.
 # Even for non-interactive, non-login shells.
-if [ $UID -gt 99 ] && [ "`id -gn`" = "`id -un`" ]; then
+# Current threshold for system reserved uid/gids is 200
+# You could check uidgid reservation validity in
+# /usr/share/doc/setup-*/uidgid file
+if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
     umask 002
 else
     umask 022
