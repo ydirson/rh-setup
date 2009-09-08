@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.8
+Version: 2.8.9
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Sep 08 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.9-1
+- reserve uidgid pair 108:108 for ovirt from libvirt (#513261)
+- reserve uidgid pair 111:111 for saned from sane-backends
+  (#520634)
+
 * Mon Aug 17 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.8-1
 - change permissions on /etc/shadow and /etc/gshadow to 0000 and
   use capabilities for them(#517577)

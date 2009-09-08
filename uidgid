@@ -110,6 +110,8 @@ ident	98	98	/		/sbin/nologin	ident
 nobody	99	99	/		/sbin/nologin	setup
 users	-	100	-		-	setup
 qemu	107	107	/		/sbin/nologin	libvirt
+ovirt	108	108	/		/sbin/nologin	libvirt
+saned	111	111	/		/sbin/nologin	sane-backends
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
