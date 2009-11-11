@@ -91,6 +91,7 @@ end
 %changelog
 * Wed Nov 11 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.10-1
 - reserve uidgid pair 112:112 for vhostmd (#534110)
+- update /etc/services to latest IANA
 
 * Tue Sep 08 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.9-1
 - reserve uidgid pair 108:108 for ovirt from libvirt (#513261)
