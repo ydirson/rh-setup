@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.9
+Version: 2.8.10
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Wed Nov 11 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.10-1
+- reserve uidgid pair 112:112 for vhostmd (#534110)
+
 * Tue Sep 08 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.9-1
 - reserve uidgid pair 108:108 for ovirt from libvirt (#513261)
 - reserve uidgid pair 111:111 for saned from sane-backends
