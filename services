@@ -3570,8 +3570,8 @@ globe           2002/udp                #
 brutus          2003/udp                # Brutus Server
 mailbox         2004/tcp                #
 emce            2004/udp                # CCWS mm conf
-berknet         2005/tcp                #
-oracle          2005/udp                #
+berknet         2005/tcp     csync      #
+oracle          2005/udp     csync      #
 invokator       2006/tcp                #
 raid-cd         2006/udp                # raid
 dectalk         2007/tcp                #
