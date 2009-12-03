@@ -43,7 +43,11 @@ fi
 
 HOSTNAME=`/bin/hostname 2>/dev/null`
 HISTSIZE=1000
-HISTCONTROL="ignoreboth"
+if [ "$HISTCONTROL" = "ignorespace" ] ; then
+    export HISTCONTROL=ignoreboth
+else
+    export HISTCONTROL=ignoredups
+fi
 
 export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
 

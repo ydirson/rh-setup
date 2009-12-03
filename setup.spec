@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.10
+Version: 2.8.11
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Thu Dec 03 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.11-1
+- don't have HISTCONTROL ignorespace by default (#520632),
+  but do not override it when it is already set
+- add csync alias for port 2005 / tcp, udp
+
 * Wed Nov 11 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.10-1
 - reserve uidgid pair 112:112 for vhostmd (#534110)
 - update /etc/services to latest IANA
