@@ -54,8 +54,9 @@ fi
 
 if ! shopt -q login_shell ; then # We're not a login shell
     # Need to redefine pathmunge, it get's undefined at the end of /etc/profile
+    # Ok to use faster bashism here as /etc/bashrc is used only by bash
     pathmunge () {
-        if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
+        if [[ ! "$PATH" =~ "(^|:)$1(:|$)" ]];then
             if [ "$2" = "after" ] ; then
                 PATH=$PATH:$1
             else
