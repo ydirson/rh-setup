@@ -18,10 +18,16 @@ pathmunge () {
     fi
 }
 
-# ksh workaround
-if [ -z "$EUID" -a -x /usr/bin/id ]; then
-    EUID=`id -u`
-    UID=`id -ru`
+
+if [ -x /usr/bin/id ]; then
+    if [ -z "$EUID" ]; then
+        # ksh workaround
+        EUID=`id -u`
+        UID=`id -ru`
+    fi
+    USER="`id -un`"
+    LOGNAME=$USER
+    MAIL="/var/spool/mail/$USER"
 fi
 
 # Path manipulation
@@ -33,12 +39,6 @@ else
     pathmunge /usr/local/sbin after
     pathmunge /usr/sbin after
     pathmunge /sbin after
-fi
-
-if [ -x /usr/bin/id ]; then
-    USER="`id -un`"
-    LOGNAME=$USER
-    MAIL="/var/spool/mail/$USER"
 fi
 
 HOSTNAME=`/bin/hostname 2>/dev/null`
