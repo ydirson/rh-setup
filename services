@@ -3293,8 +3293,8 @@ sunscalar-svc   1860/tcp                # SunSCALAR Services
 sunscalar-svc   1860/udp                # SunSCALAR Services
 lecroy-vicp     1861/tcp                # LeCroy VICP
 lecroy-vicp     1861/udp                # LeCroy VICP
-techra-server   1862/tcp                # techra-server
-techra-server   1862/udp                # techra-server
+mysql-cm-agent  1862/tcp                # MySQL Cluster Manager Agent
+mysql-cm-agent  1862/udp                # MySQL Cluster Manager Agent
 msnp            1863/tcp                # MSNP
 msnp            1863/udp                # MSNP
 paradym-31port  1864/tcp                # Paradym 31 Port
@@ -7725,6 +7725,9 @@ pslicser        4168/udp                # PrintSoft License Server
 iadt            4169/tcp                # Automation Drive Interface Transport
 iadt-disc       4169/udp                # Internet ADT Discovery Protocol
 d-cinema-csp    4170/tcp                # SMPTE Content Synchonization Protocol
+ml-svnet        4171/tcp                # Maxlogic Supervisor Communication
+pcoip           4172/tcp                # PC over IP
+pcoip           4172/udp                # PC over IP
 tl-ipcproxy     4176/tcp                # Translattice Cluster IPC Proxy
 wello           4177/tcp                # Wello P2P pubsub service
 wello           4177/udp                # Wello P2P pubsub service
@@ -7883,6 +7886,8 @@ ds-slp          4406/tcp                # ASIGRA Televaulting DS-Sleeper Service
 ds-slp          4406/udp                # ASIGRA Televaulting DS-Sleeper Service
 nacagent        4407/tcp                # Network Access Control Agent
 slscc           4408/tcp                # SLS Technology Control Centre
+netcabinet-com  4409/tcp                # Net-Cabinet comunication
+itwo-server     4410/tcp                # RIB iTWO Application Server
 beacon-port-2   4426/tcp                # SMARTS Beacon Port
 beacon-port-2   4426/udp                # SMARTS Beacon Port
 drizzle         4427/tcp                # Drizzle database server
@@ -8075,6 +8080,8 @@ gsmtap          4729/udp                # GSM Interface Tap
 gearman         4730/tcp                # Gearman Job Queue System
 gearman         4730/udp                # Gearman Job Queue System
 remcap          4731/tcp                # Remote Capture Protocol
+ohmtrigger      4732/udp                # OHM server trigger
+resorcs         4733/tcp                # RES Orchestration Catalog Services
 ipdr-sp         4737/tcp                # IPDR/SP
 ipdr-sp         4737/udp                # IPDR/SP
 solera-lpn      4738/tcp                # SoleraTec Locator
@@ -8190,6 +8197,7 @@ pwgwims         4951/tcp                # PWG WIMS
 pwgwims         4951/udp                # PWG WIMS
 sagxtsds        4952/tcp                # SAG Directory Server
 sagxtsds        4952/udp                # SAG Directory Server
+dbsyncarbiter   4953/tcp                # Synchronization Arbiter
 ccss-qmm        4969/tcp                # CCSS QMessageMonitor
 ccss-qmm        4969/udp                # CCSS QMessageMonitor
 ccss-qsm        4970/tcp                # CCSS QSystemMonitor
@@ -8239,6 +8247,7 @@ nsp             5012/udp                # NetOnTap Service
 fmpro-v6        5013/tcp                # FileMaker, Inc. - Proprietary transport
 fmpro-v6        5013/udp                # FileMaker, Inc. - Proprietary transport
 onpsocket       5014/udp                # Overlay Network Protocol
+fmwp            5015/tcp                # FileMaker, Inc. - Web publishing
 zenginkyo-1     5020/tcp                # zenginkyo-1
 zenginkyo-1     5020/udp                # zenginkyo-1
 zenginkyo-2     5021/tcp                # zenginkyo-2
@@ -8445,6 +8454,7 @@ xmp             5270/tcp                # Cartographer XMP
 xmp             5270/udp                # Cartographer XMP
 pk              5272/tcp                # PK
 pk              5272/udp                # PK
+xmpp-bosh       5280/tcp                # Bidirectional-streams Over Synchronous HTTP (BOSH)
 transmit-port   5282/tcp                # Marimba Transmitter Port
 transmit-port   5282/udp                # Marimba Transmitter Port
 presence        5298/tcp                # XMPP Link-Local Messaging
@@ -8948,6 +8958,8 @@ bmc-grx         6300/tcp                # BMC GRX
 bmc-grx         6300/udp                # BMC GRX
 bmc_ctd_ldap    6301/tcp                # BMC CONTROL-D LDAP SERVER
 bmc_ctd_ldap    6301/udp                # BMC CONTROL-D LDAP SERVER
+ufmp            6306/tcp                # Unified Fabric Management Protocol
+ufmp            6306/udp                # Unified Fabric Management Protocol
 abb-escp        6316/tcp                # Ethernet Sensor Communications Protocol
 abb-escp        6316/udp                # Ethernet Sensor Communications Protocol
 repsvc          6320/tcp                # Double-Take Replication Service
@@ -9108,6 +9120,17 @@ nexgen          6627/tcp                # Allied Electronics NeXGen
 nexgen          6627/udp                # Allied Electronics NeXGen
 afesc-mc        6628/tcp                # AFE Stock Channel M/C
 afesc-mc        6628/udp                # AFE Stock Channel M/C
+mxodbc-connect  6632/tcp                # eGenix mxODBC Connect
+ircu            6665/tcp                # IRCU
+ircu            6665/udp                # IRCU
+ircu-2          6666/tcp                # IRCU
+ircu-2          6666/udp                # IRCU
+ircu-3          6667/tcp                # IRCU
+ircu-3          6667/udp                # IRCU
+ircu-4          6668/tcp                # IRCU
+ircu-4          6668/udp                # IRCU
+ircu-5          6669/tcp                # IRCU
+ircu-5          6669/udp                # IRCU
 vocaltec-gold   6670/tcp                # Vocaltec Global Online Directory
 vocaltec-gold   6670/udp                # Vocaltec Global Online Directory
 p4p-portal      6671/tcp                # P4P Portal Service
@@ -9167,6 +9190,8 @@ netmo-http      6842/tcp                # Netmo HTTP
 netmo-http      6842/udp                # Netmo HTTP
 iccrushmore     6850/tcp                # ICCRUSHMORE
 iccrushmore     6850/udp                # ICCRUSHMORE
+acctopus-cc     6868/tcp                # Acctopus Command Channel
+acctopus-st     6868/udp                # Acctopus Status
 muse            6888/tcp                # MUSE
 muse            6888/udp                # MUSE
 xsmsvc          6936/tcp                # XenSource Management Service
@@ -9531,6 +9556,7 @@ simplifymedia   8087/tcp                # Simplify Media SPP Protocol
 simplifymedia   8087/udp                # Simplify Media SPP Protocol
 radan-http      8088/tcp                # Radan HTTP
 radan-http      8088/udp                # Radan HTTP
+jamlink         8091/tcp                # Jam Link Framework
 sac             8097/tcp                # SAC Port Id
 sac             8097/udp                # SAC Port Id
 xprint-server   8100/tcp                # Xprint Server
@@ -9597,6 +9623,7 @@ blp3            8292/tcp                # Bloomberg professional
 blp3            8292/udp                # Bloomberg professional
 blp4            8294/tcp                # Bloomberg intelligent client
 blp4            8294/udp                # Bloomberg intelligent client
+hiperscan-id    8293/tcp                # Hiperscan Identification Service
 tmi             8300/tcp                # Transport Management Interface
 tmi             8300/udp                # Transport Management Interface
 amberon         8301/tcp                # Amberon PPC/PPS
@@ -9795,6 +9822,8 @@ peerwire        9104/tcp                # PeerWire
 peerwire        9104/udp                # PeerWire
 xadmin          9105/tcp                # Xadmin Control Service
 xadmin          9105/udp                # Xadmin Control Service
+astergate       9106/tcp                # Astergate Control Service
+astergate-disc  9106/udp                # Astergate Discovery Service
 mxit            9119/tcp                # MXit Instant Messaging
 mxit            9119/udp                # MXit Instant Messaging
 dddp            9131/tcp                # Dynamic Device Discovery
@@ -10091,7 +10120,7 @@ axis-wimp-port  10260/udp               # Axis WIMP Port
 blocks          10288/tcp               # Blocks
 blocks          10288/udp               # Blocks
 cosir           10321/tcp               # Computer Op System Information Report
-hipport         10500/udp               # HIPPORT
+hip-nat-t       10500/udp               # HIP NAT-traversal
 MOS-lower       10540/tcp               # MOS Media Object Metadata Port
 MOS-lower       10540/udp               # MOS Media Object Metadata Port
 MOS-upper       10541/tcp               # MOS Running Order Port
@@ -10736,6 +10765,7 @@ nimhub          48002/tcp               # Nimbus Hub
 nimhub          48002/udp               # Nimbus Hub
 nimgtw          48003/tcp               # Nimbus Gateway
 nimgtw          48003/udp               # Nimbus Gateway
+3gpp-cbsp       48049/tcp               # 3GPP Cell Broadcast Service Protocol
 isnetserv       48128/tcp               # Image Systems Network Services
 isnetserv       48128/udp               # Image Systems Network Services
 blp5            48129/tcp               # Bloomberg locator
