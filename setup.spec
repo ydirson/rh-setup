@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.12
+Version: 2.8.13
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jan 05 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.13-1
+- update services to latest IANA
+- avoid one /usr/bin/id stat call in /etc/profile(#549056)
+
 * Thu Dec 17 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.12-1
 - speed up pathmunge inside bashrc (#544652)
 - do not use deprecated egrep in profile
