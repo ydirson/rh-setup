@@ -89,7 +89,7 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
-* Tue Jan 05 2009 Ondrej Vasik <ovasik@redhat.com> 2.8.13-1
+* Tue Jan 05 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.13-1
 - update services to latest IANA
 - avoid one /usr/bin/id stat call in /etc/profile(#549056)
 
