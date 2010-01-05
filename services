@@ -551,8 +551,6 @@ hostmon         5355/tcp        llmnr           # hostmon uses TCP (nocol)
 hostmon         5355/udp        llmnr           # hostmon uses TCP (nocol)
 canna           5680/tcp        auriga-router
 x11-ssh-offset  6010/tcp                        # SSH X11 forwarding offset
-ircd            6667/tcp                        # Internet Relay Chat
-ircd            6667/udp                        # Internet Relay Chat
 xfs             7100/tcp        font-service    # X font server
 tircproxy       7666/tcp                        # Tircproxy
 webcache        8080/tcp        http-alt        # WWW caching service
@@ -9125,8 +9123,8 @@ ircu            6665/tcp                # IRCU
 ircu            6665/udp                # IRCU
 ircu-2          6666/tcp                # IRCU
 ircu-2          6666/udp                # IRCU
-ircu-3          6667/tcp                # IRCU
-ircu-3          6667/udp                # IRCU
+ircu-3          6667/tcp        ircd    # IRCU
+ircu-3          6667/udp        ircd    # IRCU
 ircu-4          6668/tcp                # IRCU
 ircu-4          6668/udp                # IRCU
 ircu-5          6669/tcp                # IRCU
