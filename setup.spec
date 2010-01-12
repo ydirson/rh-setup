@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.13
+Version: 2.8.14
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jan 12 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.14-1
+- reserve uidgid pair 133:133 for bacula(#554705)
+
 * Tue Jan 05 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.13-1
 - update services to latest IANA
 - avoid one /usr/bin/id stat call in /etc/profile(#549056)
