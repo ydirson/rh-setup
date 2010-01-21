@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.14
+Version: 2.8.15
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Thu Jan 21 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.15-1
+- reserve uidgid pair 155:155 for stap-server(#555813)
+- reserve uidgid pair 113:113 for usbmuxd(#556525)
+
 * Tue Jan 12 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.14-1
 - reserve uidgid pair 133:133 for bacula(#554705)
 
