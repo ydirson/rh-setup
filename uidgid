@@ -113,6 +113,7 @@ qemu	107	107	/		/sbin/nologin	libvirt
 ovirt	108	108	/		/sbin/nologin	libvirt
 saned	111	111	/		/sbin/nologin	sane-backends
 vhostmd	112	112	/usr/share/vhostmd		/sbin/nologin	vhostmd
+usbmuxd	113	113	/		/sbin/nologin	usbmuxd
 bacula	133	133	/var/spool/bacula		/sbin/nologin	bacula
 stap-server	155	155	/var/lib/stap-server	/sbin/nologin	systemtap
 gnats	?	?	?		?	gnats, gnats-db
