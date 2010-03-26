@@ -1,8 +1,8 @@
 # /etc/services:
-# $Id: services,v 1.48 2009/11/11 14:32:31 ovasik Exp $
+# $Id: services,v 1.49 2010/03/26 13:06:35 ovasik Exp $
 #
 # Network services, Internet style
-# IANA services version: last updated 2009-11-10
+# IANA services version: last updated 2010-03-25
 #
 # Note that it is presently the policy of IANA to assign a single well-known
 # port number for both TCP and UDP; hence, most entries here have two entries
@@ -7753,6 +7753,7 @@ pcep            4189/tcp                # Path Computation Element Communication
 sieve           4190/tcp                # ManageSieve Protocol
 dsmipv6         4191/udp                # Dual Stack MIPv6 NAT Traversal
 azeti           4192/tcp                # Azeti Agent Service
+azeti-bd        4192/udp                # azeti blinddate
 pvxplusio       4193/tcp                # PxPlus remote file srvr
 eims-admin      4199/tcp                # EIMS ADMIN
 eims-admin      4199/udp                # EIMS ADMIN
@@ -7778,6 +7779,9 @@ dserver         4309/tcp                # Exsequi Appliance Discovery
 dserver         4309/udp                # Exsequi Appliance Discovery
 mirrtex         4310/tcp                # Mir-RT exchange service
 mirrtex         4310/udp                # Mir-RT exchange service
+p6ssmc          4311/tcp                # P6R Secure Server Management Console
+pscl-mgt        4312/tcp                # Parascale Membership Manager
+perrla          4313/tcp                # PERRLA User Services
 fdt-rcatp       4320/tcp                # FDT Remote Categorization Protocol
 fdt-rcatp       4320/udp                # FDT Remote Categorization Protocol
 trim-event      4322/tcp                # TRIM Event Service
@@ -7842,8 +7846,11 @@ epmd            4369/tcp                # Erlang Port Mapper Daemon
 epmd            4369/udp                # Erlang Port Mapper Daemon
 elpro_tunnel    4370/tcp                # ELPRO V2 Protocol Tunnel
 elpro_tunnel    4370/udp                # ELPRO V2 Protocol Tunnel
-l2c-connect     4371/tcp                # LAN 2 CAN connection service
-l2c-info        4372/tcp                # LAN 2 CAN information service
+
+l2c-control     4371/tcp                # LAN2CAN Control
+l2c-disc        4371/udp                # LAN2CAN Discovery
+l2c-data        4372/tcp                # LAN2CAN Data
+l2c-data        4372/udp                # LAN2CAN Data
 remctl          4373/tcp                # Remote Authenticated Command Service
 remctl          4373/udp                # Remote Authenticated Command Service
 psi-ptt         4374/tcp                # PSI Push-to-Talk Protocol
@@ -7996,6 +8003,7 @@ piranha1        4600/udp                # Piranha1
 piranha2        4601/tcp                # Piranha2
 piranha2        4601/udp                # Piranha2
 mtsserver       4602/tcp                # EAX MTS Server
+menandmice-upg  4603/tcp                # Men & Mice Upgrade Agent
 playsta2-app    4658/tcp                # PlayStation2 App Port
 playsta2-app    4658/udp                # PlayStation2 App Port
 playsta2-lob    4659/tcp                # PlayStation2 Lobby Port
@@ -8163,6 +8171,10 @@ cc-tracking     4870/tcp                # Citcom Tracking Service
 cc-tracking     4870/udp                # Citcom Tracking Service
 wired           4871/tcp                # Wired
 wired           4871/udp                # Wired
+hislip          4880/tcp                # IVI High-Speed LAN Instrument Protocol
+socp-t          4881/udp                # SOCP Time Synchronization Protocol
+socp-c          4882/udp                # SOCP Control Protocol
+wmlserver       4883/tcp                # Meier-Phelps License Server
 hivestor        4884/tcp                # HiveStor Distributed File System
 hivestor        4884/udp                # HiveStor Distributed File System
 abbs            4885/tcp                # ABBS
@@ -8274,6 +8286,7 @@ swxadmin        5043/tcp                # ShopWorX Administration
 swxadmin        5043/udp                # ShopWorX Administration
 lxi-evntsvc     5044/tcp                # LXI Event Service
 lxi-evntsvc     5044/udp                # LXI Event Service
+osp             5045/tcp                # Open Settlement Protocol
 ivocalize       5049/tcp                # iVocalize Web Conference
 ivocalize       5049/udp                # iVocalize Web Conference
 mmcc            5050/tcp                # multimedia conference control tool
@@ -8339,6 +8352,8 @@ cxtp            5091/sctp               # Context Transfer Protocol
 magpie          5092/udp                # Magpie Binary
 sentinel-lm     5093/tcp                # Sentinel LM
 sentinel-lm     5093/udp                # Sentinel LM
+hart-ip         5094/tcp                # HART-IP
+hart-ip         5094/udp                # HART-IP
 sentlm-srv2srv  5099/tcp                # SentLM Srv2Srv
 sentlm-srv2srv  5099/udp                # SentLM Srv2Srv
 socalia         5100/tcp                # Socalia service mux
@@ -8399,6 +8414,7 @@ aol-2           5192/tcp                # AmericaOnline2
 aol-2           5192/udp                # AmericaOnline2
 aol-3           5193/tcp                # AmericaOnline3
 aol-3           5193/udp                # AmericaOnline3
+cpscomm         5194/tcp                # CipherPoint Config Service
 targus-getdata  5200/tcp                # TARGUS GetData
 targus-getdata  5200/udp                # TARGUS GetData
 targus-getdata1 5201/tcp                # TARGUS GetData 1
@@ -8748,6 +8764,8 @@ omsdk           5724/udp                # Operations Manager - SDK Service
 ms-ilm          5725/tcp                # Microsoft Identity Lifecycle Manager
 ms-ilm-sts      5726/tcp                # Microsoft Lifecycle Manager Secure Token Service
 asgenf          5727/tcp                # ASG Event Notification Framework
+io-dist-data    5728/tcp                # Dist. I/O Comm. Service Data and Control
+io-dist-group   5728/udp                # Dist. I/O Comm. Service Group Membership
 openmail        5729/tcp                # Openmail User Agent Layer
 openmail        5729/udp                # Openmail User Agent Layer
 unieng          5730/tcp                # Steltor's calendar access
@@ -8795,8 +8813,10 @@ vts-rpc         5780/tcp                # Visual Tag System RPC
 3par-mgmt       5782/udp                # 3PAR Management Service
 3par-mgmt-ssl   5783/tcp                # 3PAR Management Service with SSL
 3par-mgmt-ssl   5783/udp                # 3PAR Management Service with SSL
+ibar            5784/udp                # Cisco Interbox Application Redundancy
 3par-rcopy      5785/tcp                # 3PAR Inform Remote Copy
 3par-rcopy      5785/udp                # 3PAR Inform Remote Copy
+cisco-redu      5786/udp                # redundancy notification
 xtreamx         5793/tcp                # XtreamX Supervised Peer message
 xtreamx         5793/udp                # XtreamX Supervised Peer message
 icmpd           5813/tcp                # ICMPD
@@ -8924,6 +8944,7 @@ montage-lm      6147/tcp                # Montage License Manager
 montage-lm      6147/udp                # Montage License Manager
 tal-pod         6149/tcp                # tal-pod
 tal-pod         6149/udp                # tal-pod
+efb-aci         6159/tcp                # EFB Application Control Interface
 patrol-ism      6161/tcp                # PATROL Internet Srv Mgr
 patrol-ism      6161/udp                # PATROL Internet Srv Mgr
 patrol-coll     6162/tcp                # PATROL Collector
@@ -9008,6 +9029,8 @@ boe-resssvr4    6410/tcp                # Business Objects Enterprise internal s
 boe-resssvr4    6410/udp                # Business Objects Enterprise internal server
 faxcomservice   6417/tcp                # Faxcom Message Service
 faxcomservice   6417/udp                # Faxcom Message Service
+syserverremote  6418/tcp                # SYserver remote commands
+svdrp           6419/tcp                # Simple VDR Protocol
 nim-vdrshell    6420/tcp                # NIM_VDRShell
 nim-vdrshell    6420/udp                # NIM_VDRShell
 nim-wan         6421/tcp                # NIM_WAN
@@ -9090,6 +9113,7 @@ sane-port       6566/udp                # SANE Control Port
 esp             6567/tcp                # eSilo Storage Protocol
 esp             6567/udp                # eSilo Storage Protocol
 canit_store     6568/tcp                # CanIt Storage Manager
+rp-reputation   6568/udp                # Roaring Penguin IP Address Reputation Collection
 affiliate       6579/tcp                # Affiliate
 affiliate       6579/udp                # Affiliate
 parsec-master   6580/tcp                # Parsec Masterserver
@@ -9112,6 +9136,8 @@ mcftp           6622/tcp                # Multicast FTP
 mcftp           6622/udp                # Multicast FTP
 ktelnet         6623/tcp                # Kerberos V5 Telnet
 ktelnet         6623/udp                # Kerberos V5 Telnet
+datascaler-db   6624/tcp                # DataScaler database
+datascaler-ctl  6625/tcp                # DataScaler control
 wago-service    6626/tcp                # WAGO Service and Update
 wago-service    6626/udp                # WAGO Service and Update
 nexgen          6627/tcp                # Allied Electronics NeXGen
@@ -9137,18 +9163,19 @@ vision_server   6672/tcp                # vision_server
 vision_server   6672/udp                # vision_server
 vision_elmd     6673/tcp                # vision_elmd
 vision_elmd     6673/udp                # vision_elmd
+clever-ctrace   6687/tcp                # CleverView for cTrace Message Service
 clever-tcpip    6688/tcp                # CleverView for TCP/IP Message Service
 tsa             6689/tcp                # Tofino Security Appliance
 tsa             6689/udp                # Tofino Security Appliance
-frc-hp          6700/sctp               # ForCES HP (High Priority) channel
 kti-icad-srvr   6701/tcp                # KTI/ICAD Nameserver
 kti-icad-srvr   6701/udp                # KTI/ICAD Nameserver
-frc-mp          6701/sctp               # ForCES MP (Medium Priority) channel
-frc-lp          6702/sctp               # ForCES LP (Low priority) channel
 e-design-net    6702/tcp                # e-Design network
 e-design-net    6702/udp                # e-Design network
 e-design-web    6703/tcp                # e-Design web
 e-design-web    6703/udp                # e-Design web
+frc-hp          6704/sctp               # ForCES HP (High Priority) channel
+frc-mp          6705/sctp               # ForCES MP (Medium Priority) channel
+frc-lp          6706/sctp               # ForCES LP (Low priority) channel
 ibprotocol      6714/tcp                # Internet Backplane Protocol
 ibprotocol      6714/udp                # Internet Backplane Protocol
 fibotrader-com  6715/tcp                # Fibotrader Communications
@@ -9246,6 +9273,8 @@ op-probe        7030/tcp                # ObjectPlanet probe
 op-probe        7030/udp                # ObjectPlanet probe
 arcp            7070/tcp                # ARCP
 arcp            7070/udp                # ARCP
+iwg1            7071/tcp                # IWGADTS Aircraft Housekeeping Message
+iwg1            7071/udp                # IWGADTS Aircraft Housekeeping Message
 empowerid       7080/tcp                # EmpowerID Communication
 empowerid       7080/udp                # EmpowerID Communication
 lazy-ptop       7099/tcp                # lazy-ptop
@@ -9271,6 +9300,13 @@ doc-server      7165/tcp                # Document WCF Server
 doc-server      7165/udp                # Document WCF Server
 aruba-server    7166/tcp                # Aruba eDiscovery Server
 aruba-server    7166/udp                # Aruba eDiscovery Server
+casrmagent      7167/tcp                # CA SRM Agent
+ccag-pib        7169/tcp                # Consequor Consulting Process Integration Bridge
+ccag-pib        7169/udp                # Consequor Consulting Process Integration Bridge
+nsrp            7170/tcp                # Adaptive Name/Service Resolution
+nsrp            7170/udp                # Adaptive Name/Service Resolution
+drm-production  7171/tcp                # Discovery and Retention Mgt Production
+drm-production  7171/udp                # Discovery and Retention Mgt Production
 clutild         7174/tcp                # Clutild
 clutild         7174/udp                # Clutild
 fodms           7200/tcp                # FODMS FLIP
@@ -9302,6 +9338,7 @@ itactionserver1 7280/udp                # ITACTIONSERVER 1
 itactionserver2 7281/tcp                # ITACTIONSERVER 2
 itactionserver2 7281/udp                # ITACTIONSERVER 2
 mzca-action     7282/tcp                # eventACTION/ussACTION (MZCA) server
+mzca-alert      7282/udp                # eventACTION/ussACTION (MZCA) alert
 lcm-server      7365/tcp                # LifeKeeper Communications
 lcm-server      7365/udp                # LifeKeeper Communications
 mindfilesys     7391/tcp                # mind-file system server
@@ -9788,6 +9825,8 @@ swa-3           9025/tcp                # Secure Web Access - 3
 swa-3           9025/udp                # Secure Web Access - 3
 swa-4           9026/tcp                # Secure Web Access - 4
 swa-4           9026/udp                # Secure Web Access - 4
+versiera        9050/tcp                # Versiera Agent Listener
+fio-cmgmt       9051/tcp                # Fusion-io Central Manager Service
 glrpc           9080/tcp                # Groove GLRPC
 glrpc           9080/udp                # Groove GLRPC
 aurora          9084/tcp                # IBM AURORA Performance Visualizer
@@ -9822,6 +9861,7 @@ xadmin          9105/tcp                # Xadmin Control Service
 xadmin          9105/udp                # Xadmin Control Service
 astergate       9106/tcp                # Astergate Control Service
 astergate-disc  9106/udp                # Astergate Discovery Service
+astergatefax    9107/tcp                # AstergateFax Control Service
 mxit            9119/tcp                # MXit Instant Messaging
 mxit            9119/udp                # MXit Instant Messaging
 dddp            9131/tcp                # Dynamic Device Discovery
@@ -9954,8 +9994,8 @@ trispen-sra     9555/tcp                # Trispen Secure Remote Access
 trispen-sra     9555/udp                # Trispen Secure Remote Access
 ldgateway       9592/tcp                # LANDesk Gateway
 ldgateway       9592/udp                # LANDesk Gateway
-cba8            9593/tcp                # LANDesk Management Agent
-cba8            9593/udp                # LANDesk Management Agent
+cba8            9593/tcp                # LANDesk Management Agent (cba8)
+cba8            9593/udp                # LANDesk Management Agent (cba8)
 msgsys          9594/tcp                # Message System
 msgsys          9594/udp                # Message System
 pds             9595/tcp                # Ping Discovery Service
@@ -10330,8 +10370,12 @@ soundsvirtual   17185/tcp               # Sounds Virtual
 soundsvirtual   17185/udp               # Sounds Virtual
 chipper         17219/tcp               # Chipper
 chipper         17219/udp               # Chipper
+integrius-stp   17234/tcp               # Integrius Secure Tunnel Protocol
+integrius-stp   17234/udp               # Integrius Secure Tunnel Protocol
 ssh-mgmt        17235/tcp               # SSH Tectia Manager
 ssh-mgmt        17235/udp               # SSH Tectia Manager
+db-lsp          17500/tcp               # Dropbox LanSync Protocol
+db-lsp-disc     17500/udp               # Dropbox LanSync Discovery
 ea              17729/tcp               # Eclipse Aviation
 ea              17729/udp               # Eclipse Aviation
 zep             17754/tcp               # Encap. ZigBee Packets
@@ -10654,12 +10698,15 @@ filenet-peior   32776/tcp               # FileNET BPM IOR
 filenet-peior   32776/udp               # FileNET BPM IOR
 filenet-obrok   32777/tcp               # FileNet BPM CORBA
 filenet-obrok   32777/udp               # FileNet BPM CORBA
+mlsn            32801/tcp               # Multiple Listing Service Network
+mlsn            32801/udp               # Multiple Listing Service Network
 idmgratm        32896/tcp               # Attachmate ID Manager
 idmgratm        32896/udp               # Attachmate ID Manager
 aurora-balaena  33123/tcp               # Aurora (Balaena Ltd)
 aurora-balaena  33123/udp               # Aurora (Balaena Ltd)
 diamondport     33331/tcp               # DiamondCentral Interface
 diamondport     33331/udp               # DiamondCentral Interface
+dgi-serv        33333/tcp               # Digital Gaslight Service
 snip-slave      33656/tcp               # SNIP Slave
 snip-slave      33656/udp               # SNIP Slave
 turbonote-2     34249/tcp               # TurboNote Relay Server Default Port

@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.15
+Version: 2.8.16
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Fri Mar 26 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.16-1
+- drop X11R6 hierarchy dir from tcsh path (#576940)
+- update services to latest IANA
+- update protocols to latest IANA
+
 * Thu Jan 21 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.15-1
 - reserve uidgid pair 155:155 for stap-server(#555813)
 - reserve uidgid pair 113:113 for usbmuxd(#556525)

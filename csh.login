@@ -3,14 +3,10 @@
 # System wide environment and startup programs, for login setup
 
 if ($?PATH) then
-	if ( "${path}" !~ */usr/X11R6/bin* ) then
-		setenv PATH "${PATH}:/usr/X11R6/bin"
-        endif
-else
 	if ( $uid == 0 ) then
-		setenv PATH "/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin"
+		setenv PATH "/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin"
 	else
-		setenv PATH "/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin"
+		setenv PATH "/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin"
 	endif
 endif
 
