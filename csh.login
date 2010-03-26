@@ -2,10 +2,14 @@
 
 # System wide environment and startup programs, for login setup
 
-if ( $uid == 0 ) then
-	setenv PATH "/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin"
+if ( $?PATH ) then
+  #do not override user specified PATH
 else
-	setenv PATH "/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin"
+	if ( $uid == 0 ) then
+		setenv PATH "/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin"
+	else
+		setenv PATH "/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin"
+	endif
 endif
 
 setenv HOSTNAME `/bin/hostname`
