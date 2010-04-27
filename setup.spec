@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.17
+Version: 2.8.18
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Apr 27 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.18-1
+- reserve uidgid pair 140:140 for ricci daemon(#585957)
+- reserve uidgid pair 141:141 for luci daemon(#585958)
+
 * Wed Mar 31 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.17-1
 - verify md5sum/size/mtime in the case of /etc/hosts.allow
   and /etc/hosts.deny (#578263)
