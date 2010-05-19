@@ -89,7 +89,7 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
-* Tue May 19 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.19-1
+* Wed May 19 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.19-1
 - fix syntax error in bashrc pathmunge(since bash 3.2)(#592799)
 
 * Tue Apr 27 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.18-1
