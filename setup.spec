@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.18
+Version: 2.8.19
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue May 19 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.19-1
+- fix syntax error in bashrc pathmunge(since bash 3.2)(#592799)
+
 * Tue Apr 27 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.18-1
 - reserve uidgid pair 140:140 for ricci daemon(#585957)
 - reserve uidgid pair 141:141 for luci daemon(#585958)
