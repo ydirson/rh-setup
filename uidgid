@@ -84,7 +84,7 @@ privoxy	73	73	/etc/privoxy		/bin/bash	privoxy
 sshd	74	74	/var/empty/sshd		/sbin/nologin	openssh-server
 radvd	75	75	/		/bin/false	radvd
 cyrus	76	(12)	/var/imap		/bin/bash	cyrus-imapd
-shadow	-	76	-		-	cyrus-imapd
+saslauth	-	76	-		-	cyrus-imapd
 arpwatch	77	77	/var/lib/arpwatch		/sbin/nologin	arpwatch
 fax	78	78	/var/spool/fax		/sbin/nologin	mgetty
 nocpulse	79	79	/etc/sysconfig/nocpulse		/bin/bash	nocpulse
