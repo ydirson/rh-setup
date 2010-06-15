@@ -77,7 +77,7 @@ pegasus	66	65	/var/lib/Pegasus		/sbin/nologin	tog-pegasus
 webalizer	67	67	/var/www/html/usage		/sbin/nologin	webalizer
 haldaemon	68	68	/		/sbin/nologin	hal
 vcsa	69	69	-		/sbin/nologin	dev,MAKEDEV
-avahi	70	70	/		/sbin/nologin	avahi
+avahi	70	70	/var/run/avahi-daemon		/sbin/nologin	avahi
 realtime	-	71	-		-	-
 tcpdump	72	72	/		/sbin/nologin	tcpdump
 privoxy	73	73	/etc/privoxy		/bin/bash	privoxy
@@ -118,6 +118,8 @@ bacula	133	133	/var/spool/bacula		/sbin/nologin	bacula
 ricci	140	140	/var/lib/ricci		/sbin/nologin	ricci
 luci	141	141	/var/lib/luci		/sbin/nologin	luci
 stap-server	155	155	/var/lib/stap-server		/sbin/nologin	systemtap
+avahi-autoipd	170	170	/var/lib/avahi-autoipd		/sbin/nologin	avahi
+pulse	171	171	/var/run/pulse		/sbin/nologin	pulseaudio
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils

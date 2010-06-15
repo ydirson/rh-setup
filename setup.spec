@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.21
+Version: 2.8.22
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jun 15 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.22-1
+- reserve uidgid pair 170:170 for avahi-autoipd
+- reserve uidgid pair 171:171 for pulse (pulseaudio)
+- update reserved homedir for avahi
+
 * Mon Jun 07 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.21-1
 - update name of group reserved by cyrus-imapd to saslauth
 
