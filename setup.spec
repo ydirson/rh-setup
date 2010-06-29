@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.22
+Version: 2.8.23
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jun 29 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.23-1
+- reserve uidgid pair 172:172 for rtkit (#609171)
+
 * Tue Jun 15 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.22-1
 - reserve uidgid pair 170:170 for avahi-autoipd
 - reserve uidgid pair 171:171 for pulse (pulseaudio)
