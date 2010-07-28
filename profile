@@ -54,9 +54,19 @@ fi
 
 export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
 
+# By default, we want umask to get set. This sets it for login shell
+# Current threshold for system reserved uid/gids is 200
+# You could check uidgid reservation validity in
+# /usr/share/doc/setup-*/uidgid file
+if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+    umask 002
+else
+    umask 022
+fi
+
 for i in /etc/profile.d/*.sh ; do
     if [ -r "$i" ]; then
-        if [ "$PS1" ]; then
+        if [ "${-#*i}" != "$-" ]; then 
             . $i
         else
             . $i >/dev/null 2>&1

@@ -89,6 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Wed Jul 28 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.24-1
+- do show messages from profile.d scripts in interactive
+  login ksh shell(#616418)
+- respect umask settings even with login shell
+
 * Tue Jun 29 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.23-1
 - reserve uidgid pair 172:172 for rtkit (#609171)
 

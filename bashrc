@@ -8,17 +8,6 @@
 # /etc/profile.d/ to make custom changes to environment. This will
 # prevent need for merging in future updates.
 
-# By default, we want this to get set.
-# Even for non-interactive, non-login shells.
-# Current threshold for system reserved uid/gids is 200
-# You could check uidgid reservation validity in
-# /usr/share/doc/setup-*/uidgid file
-if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
-    umask 002
-else
-    umask 022
-fi
-
 # are we an interactive shell?
 if [ "$PS1" ]; then
     case $TERM in
@@ -66,6 +55,16 @@ if ! shopt -q login_shell ; then # We're not a login shell
                 fi
         esac
     }
+
+    # By default, we want umask to get set. This sets it for non-login shell.
+    # Current threshold for system reserved uid/gids is 200
+    # You could check uidgid reservation validity in
+    # /usr/share/doc/setup-*/uidgid file
+    if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+       umask 002
+    else
+       umask 022
+    fi
 
     # Only display echos from profile.d scripts if we are no login shell
     # and interactive - otherwise just process them to set envvars
