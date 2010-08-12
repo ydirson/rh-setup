@@ -8480,7 +8480,7 @@ xmpp-server     5269/tcp                # XMPP Server Connection
 xmpp-server     5269/udp                # XMPP Server Connection
 xmp             5270/tcp                # Cartographer XMP
 xmp             5270/udp                # Cartographer XMP
-cuelink         5271/tdp                # StageSoft CueLink messaging
+cuelink         5271/tcp                # StageSoft CueLink messaging
 cuelink-disc    5271/udp                # StageSoft CueLink discovery
 pk              5272/tcp                # PK
 pk              5272/udp                # PK
