@@ -3,10 +3,10 @@
 # System wide functions and aliases
 # Environment stuff goes in /etc/profile
 
-# It's NOT good idea to change this file unless you know what you
-# are doing. Much better way is to create custom.sh shell script in
-# /etc/profile.d/ to make custom changes to environment. This will
-# prevent need for merging in future updates.
+# It's NOT a good idea to change this file unless you know what you
+# are doing. It's much better to create a custom.sh shell script in
+# /etc/profile.d/ to make custom changes to your environment, as this
+# will prevent the need for merging in future updates.
 
 # are we an interactive shell?
 if [ "$PS1" ]; then
