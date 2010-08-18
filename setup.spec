@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.25
+Version: 2.8.26
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Wed Aug 18 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.26-1
+- fix regression in the change to printf(#624900)
+
 * Thu Aug 12 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.25-1
 - use printf instead of echo in bashrc scripts(#620435)
 - update services to latest IANA
