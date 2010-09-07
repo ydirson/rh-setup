@@ -67,9 +67,9 @@ fi
 for i in /etc/profile.d/*.sh ; do
     if [ -r "$i" ]; then
         if [ "${-#*i}" != "$-" ]; then 
-            . $i
+            . "$i"
         else
-            . $i >/dev/null 2>&1
+            . "$i" >/dev/null 2>&1
         fi
     fi
 done

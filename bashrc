@@ -71,9 +71,9 @@ if ! shopt -q login_shell ; then # We're not a login shell
     for i in /etc/profile.d/*.sh; do
         if [ -r "$i" ]; then
             if [ "$PS1" ]; then
-                . $i
+                . "$i"
             else
-                . $i >/dev/null 2>&1
+                . "$i" >/dev/null 2>&1
             fi
         fi
     done

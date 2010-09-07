@@ -59,11 +59,11 @@ if (! $?loginsh) then
     if ( -d /etc/profile.d ) then
         set nonomatch
         foreach i ( /etc/profile.d/*.csh )
-            if ( -r $i ) then
+            if ( -r "$i" ) then
                 if ($?prompt) then
-                    source $i
+                    source "$i"
                 else
-                    source $i >&/dev/null
+                    source "$i" >&/dev/null
                 endif
             endif
         end
