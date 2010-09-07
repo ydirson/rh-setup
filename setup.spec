@@ -90,7 +90,7 @@ end
 
 %changelog
 * Tue Sep 07 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.27-1
-- add double quotes arround sourced profile.d scripts - 
+- add double quotes arround sourced profile.d scripts -
   allow special characters in script names
 
 * Wed Aug 18 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.26-1
