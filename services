@@ -568,8 +568,6 @@ amandaidx       10082/tcp                       # amanda backup services
 amidxtape       10083/tcp                       # amanda backup services
 isdnlog         20011/tcp                       # isdn logging system
 isdnlog         20011/udp                       # isdn logging system
-vboxd           20012/tcp                       # voice box system
-vboxd           20012/udp                       # voice box system
 wnn4_Kr         22305/tcp       cis             # used by the kWnn package
 wnn4_Cn         22289/tcp                       # used by the cWnn package
 wnn4_Tw         22321/tcp                       # used by the tWnn package
