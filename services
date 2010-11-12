@@ -1,8 +1,8 @@
 # /etc/services:
-# $Id: services,v 1.50 2010/08/12 16:11:35 ovasik Exp $
+# $Id: services,v 1.51 2010/11/12 12:45:32 ovasik Exp $
 #
 # Network services, Internet style
-# IANA services version: last updated 2010-03-25
+# IANA services version: last updated 2010-11-09
 #
 # Note that it is presently the policy of IANA to assign a single well-known
 # port number for both TCP and UDP; hence, most entries here have two entries
@@ -253,7 +253,9 @@ phonebook       767/tcp                         # Network phonebook
 phonebook       767/udp
 rsync           873/tcp                         # rsync
 rsync           873/udp                         # rsync
+#rquotad unreserved in IANA!
 rquotad         875/tcp                         # rquota daemon
+#rquotad unreserved in IANA!
 rquotad         875/udp                         # rquota daemon
 telnets         992/tcp
 telnets         992/udp
@@ -1997,7 +1999,7 @@ mc-client       1180/udp                # Millicent Client Proxy
 3comnetman      1181/tcp                # 3Com Net Management
 3comnetman      1181/udp                # 3Com Net Management
 accelenet       1182/tcp                # AcceleNet Control
-accelenet       1182/udp                # AcceleNet Control
+accelenet-data  1182/udp                # AcceleNet Data
 llsurfup-http   1183/tcp                # LL Surfup HTTP
 llsurfup-http   1183/udp                # LL Surfup HTTP
 llsurfup-https  1184/tcp                # LL Surfup HTTPS
@@ -6548,8 +6550,7 @@ esimport        3564/tcp                # Electromed SIM port
 esimport        3564/udp                # Electromed SIM port
 m2pa            3565/tcp                # M2PA
 m2pa            3565/sctp               # M2PA
-quest-launcher  3566/tcp                # Quest Agent Manager
-quest-launcher  3566/udp                # Quest Agent Manager
+quest-data-hub  3566/tcp                # Quest Data Hub
 oap             3567/tcp                # Object Access Protocol
 oap             3567/udp                # Object Access Protocol
 oap-s           3568/tcp                # Object Access Protocol over SSL
@@ -7897,6 +7898,8 @@ nacagent        4407/tcp                # Network Access Control Agent
 slscc           4408/tcp                # SLS Technology Control Centre
 netcabinet-com  4409/tcp                # Net-Cabinet comunication
 itwo-server     4410/tcp                # RIB iTWO Application Server
+netrockey6      4425/tcp                # NetROCKEY6 SMART Plus Service
+netrockey6      4425/udp                # NetROCKEY6 SMART Plus Service
 beacon-port-2   4426/tcp                # SMARTS Beacon Port
 beacon-port-2   4426/udp                # SMARTS Beacon Port
 drizzle         4427/tcp                # Drizzle database server
@@ -7941,6 +7944,11 @@ mcp             4458/udp                # Matrix Configuration Protocol
 hpssmgmt        4484/tcp                # hpssmgmt service
 hpssmgmt        4484/udp                # hpssmgmt service
 assyst-dr       4485/tcp                # Assyst Data Repository Service
+icms            4486/tcp                # Integrated Client Message Service 
+icms            4486/udp                # Integrated Client Message Service
+prex-tcp        4487/tcp                # Protocol for Remote Execution over TCP
+awacs-ice       4488/tcp                # Apple Wide Area Connectivity Service ICE Bootstrap
+awacs-ice       4488/udp                # Apple Wide Area Connectivity Service ICE Bootstrap
 ipsec-nat-t     4500/tcp                # IPsec NAT-Traversal
 ipsec-nat-t     4500/udp                # IPsec NAT-Traversal
 ehs             4535/tcp                # Event Heap Server
@@ -8087,6 +8095,13 @@ netxms-sync     4702/tcp                # NetXMS Server Synchronization
 netxms-sync     4702/udp                # NetXMS Server Synchronization
 npqes-test      4703/tcp                # Network Performance Quality Evaluation System Test Service
 assuria-ins     4704/tcp                # Assuria Insider
+#pulseaudio is not registered in IANA
+pulseaudio      4713/tcp                # Pulseaudio
+truckstar       4725/tcp                # TruckStar Service
+truckstar       4725/udp                # TruckStar Service
+a26-fap-fgw     4726/udp                # A26 (FAP-FGW)
+fcis            4727/tcp                # F-Link Client Information Service
+fcis-disc       4727/udp                # F-Link Client Information Service Discovery
 capmux          4728/tcp                # CA Port Multiplexer
 capmux          4728/udp                # CA Port Multiplexer
 gsmtap          4729/udp                # GSM Interface Tap
@@ -8216,6 +8231,7 @@ pwgwims         4951/udp                # PWG WIMS
 sagxtsds        4952/tcp                # SAG Directory Server
 sagxtsds        4952/udp                # SAG Directory Server
 dbsyncarbiter   4953/tcp                # Synchronization Arbiter
+###UNAUTHORIZED USE: port 4967 by Rockwell FTA#######
 ccss-qmm        4969/tcp                # CCSS QMessageMonitor
 ccss-qmm        4969/udp                # CCSS QMessageMonitor
 ccss-qsm        4970/tcp                # CCSS QSystemMonitor
@@ -8375,12 +8391,12 @@ talarian-udp    5101/udp                # Talarian_UDP
 oms-nonsecure   5102/tcp                # Oracle OMS non-secure
 oms-nonsecure   5102/udp                # Oracle OMS non-secure
 actifio-c2c     5103/tcp                # Actifio C2C
+tinymessage     5104/udp                # TinyMessage
+hughes-ap       5105/udp                # Hughes Association Protocol
 taep-as-svc     5111/tcp                # TAEP AS service
 taep-as-svc     5111/udp                # TAEP AS service
 pm-cmdsvr       5112/tcp                # PeerMe Msg Cmd Service
 pm-cmdsvr       5112/udp                # PeerMe Msg Cmd Service
-ni-conf         5113/tcp                # NI Device Configuration Protocol
-ni-dc           5113/udp                # NI Device Discovery and Configuration Protocol
 ev-services     5114/tcp                # Enterprise Vault Services
 autobuild       5115/tcp                # Symantec Autobuild Service
 emb-proj-cmd    5116/udp                # EPSON Projecter Image Transfer
@@ -8406,6 +8422,8 @@ bzflag          5154/tcp                # BZFlag game server
 bzflag          5154/udp                # BZFlag game server
 asctrl-agent    5155/tcp                # Oracle asControl Agent
 asctrl-agent    5155/udp                # Oracle asControl Agent
+rugameonline    5156/tcp                # Russian Online Game
+mediat          5157/tcp                # Mediat Remote Object Exchange
 snmpssh         5161/tcp                # SNMP over SSH Transport Model
 snmpssh-trap    5162/tcp                # SNMP Notification over SSH Transport Model
 sbackup         5163/tcp                # Shadow Backup
@@ -8472,6 +8490,7 @@ caevms          5251/tcp                # CA eTrust VM Service
 caevms          5251/udp                # CA eTrust VM Service
 movaz-ssc       5252/tcp                # Movaz SSC
 movaz-ssc       5252/udp                # Movaz SSC
+kpdp            5253/tcp                # Kohler Power Device Protocol
 3com-njack-1    5264/tcp                # 3Com Network Jack Port 1
 3com-njack-1    5264/udp                # 3Com Network Jack Port 1
 3com-njack-2    5265/tcp                # 3Com Network Jack Port 2
@@ -8942,6 +8961,9 @@ spc             6111/udp                # HP SoftBench Sub-Process Control
 dtspcd          6112/tcp                # dtspcd
 dtspcd          6112/udp                # dtspcd
 dayliteserver   6113/tcp                # Daylite Server
+wrspice         6114/tcp                # WRspice IPC Service
+xic             6115/tcp                # Xic IPC Service
+xtlserv         6116/tcp                # XicTools License Manager Service
 daylitetouch    6117/tcp                # Daylite Touch Sync
 spdy            6121/tcp                # SPDY for a faster web
 bex-webadmin    6122/tcp                # Backup Express Web Server
@@ -9005,6 +9027,8 @@ bmc_ctd_ldap    6301/tcp                # BMC CONTROL-D LDAP SERVER
 bmc_ctd_ldap    6301/udp                # BMC CONTROL-D LDAP SERVER
 ufmp            6306/tcp                # Unified Fabric Management Protocol
 ufmp            6306/udp                # Unified Fabric Management Protocol
+scup            6315/tcp                # Sensor Control Unit Protocol
+scup-disc       6315/udp                # Sensor Control Unit Protocol Discovery Protocol
 abb-escp        6316/tcp                # Ethernet Sensor Communications Protocol
 abb-escp        6316/udp                # Ethernet Sensor Communications Protocol
 repsvc          6320/tcp                # Double-Take Replication Service
@@ -9339,6 +9363,7 @@ nsrp            7170/tcp                # Adaptive Name/Service Resolution
 nsrp            7170/udp                # Adaptive Name/Service Resolution
 drm-production  7171/tcp                # Discovery and Retention Mgt Production
 drm-production  7171/udp                # Discovery and Retention Mgt Production
+zsecure         7173/tcp                # zSecure Server
 clutild         7174/tcp                # Clutild
 clutild         7174/udp                # Clutild
 fodms           7200/tcp                # FODMS FLIP
@@ -9499,6 +9524,8 @@ smip            7734/tcp                # Smith Protocol over IP
 smip            7734/udp                # Smith Protocol over IP
 aiagent         7738/tcp                # HP Enterprise Discovery Agent
 aiagent         7738/udp                # HP Enterprise Discovery Agent
+scriptview      7741/tcp                # ScriptView Network
+scriptview      7741/udp                # ScriptView Network
 msss            7742/tcp                # Mugginsoft Script Server Service
 sstp-1          7743/tcp                # Sakura Script Transfer Protocol
 sstp-1          7743/udp                # Sakura Script Transfer Protocol
@@ -9564,6 +9591,9 @@ micromuse-ncps  7979/tcp                # Micromuse-ncps
 micromuse-ncps  7979/udp                # Micromuse-ncps
 quest-vista     7980/tcp                # Quest Vista
 quest-vista     7980/udp                # Quest Vista
+sossd-collect   7981/tcp                # Spotlight on SQL Server Desktop Collect
+sossd-agent     7982/tcp                # Spotlight on SQL Server Desktop Agent
+sossd-disc      7982/udp                # Spotlight on SQL Server Desktop Agent Discovery
 usicontentpush  7998/udp                # USI Content Push Service
 irdmi2          7999/tcp                # iRDMI2
 irdmi2          7999/udp                # iRDMI2
@@ -10254,6 +10284,9 @@ suncacao-csa    11164/tcp               # sun cacao command-streaming access poi
 suncacao-csa    11164/udp               # sun cacao command-streaming access point
 suncacao-websvc 11165/tcp               # sun cacao web service access point
 suncacao-websvc 11165/udp               # sun cacao web service access point
+oemcacao-jmxmp  11172/tcp               # OEM cacao JMX-remoting access point
+oemcacao-rmi    11174/tcp               # OEM cacao rmi registry access point
+oemcacao-websvc 11175/tcp               # OEM cacao web service access point
 smsqp           11201/tcp               # smsqp
 smsqp           11201/udp               # smsqp
 wifree          11208/tcp               # WiFree Service
@@ -10272,6 +10305,9 @@ tempest-port    11600/tcp               # Tempest Protocol Port
 tempest-port    11600/udp               # Tempest Protocol Port
 intrepid-ssl    11751/tcp               # Intrepid SSL
 intrepid-ssl    11751/udp               # Intrepid SSL
+xoraya          11876/tcp               # X2E Xoraya Multichannel protocol
+xoraya          11876/udp               # X2E Xoraya Multichannel protocol
+x2e-disc        11877/udp               # X2E service discovery protocol
 sysinfo-sp      11967/tcp               # SysInfo Service Protocol
 sysinfo-sp      11967/udp               # SysInfo Sercice Protocol
 wmereceiving    11997/sctp              # WorldMailExpress
@@ -10387,6 +10423,12 @@ bex-xr          15660/tcp               # Backup Express Restore Server
 bex-xr          15660/udp               # Backup Express Restore Server
 ptp             15740/tcp               # Picture Transfer Protocol
 ptp             15740/udp               # Picture Transfer Protocol
+2ping           15998/udp               # 2ping Bi-Directional Ping Service
+programmar      15999/tcp               # ProGrammar Enterprise
+fmsas           16000/tcp               # Administration Server Access
+fmsascon        16001/tcp               # Administration Server Connector
+gsms            16002/tcp               # GoodSync Mediation Service
+alfin           16003/udp               # Automation and Control by REGULACE.ORG
 jwpc            16020/tcp               # Filemaker Java Web Publishing Core
 jwpc-bin        16021/tcp               # Filemaker Java Web Publishing Core Binary
 sun-sea-port    16161/tcp               # Solaris SEA Port
@@ -10447,6 +10489,7 @@ sw-orion        17777/tcp               # SolarWinds Orion
 biimenu         18000/tcp               # Beckman Instruments, Inc.
 biimenu         18000/udp               # Beckman Instruments, Inc.
 radpdf          18104/tcp               # RAD PDF Service
+racf            18136/tcp               # z/OS Resource Access Control Facility
 opsec-cvp       18181/tcp               # OPSEC CVP
 opsec-cvp       18181/udp               # OPSEC CVP
 opsec-ufp       18182/tcp               # OPSEC UFP
@@ -10502,6 +10545,7 @@ sxuptp          19540/tcp               # SXUPTP
 sxuptp          19540/udp               # SXUPTP
 jcp             19541/tcp               # JCP Client
 jcp             19541/udp               # JCP Client
+iec-104-sec     19998/tcp               # IEC 60870-5-104 process control - secure
 dnp-sec         19999/tcp               # Distributed Network Protocol - Secure
 dnp-sec         19999/udp               # Distributed Network Protocol - Secure
 dnp             20000/tcp               # DNP
@@ -10514,6 +10558,8 @@ commtact-https  20003/tcp               # Commtact HTTPS
 commtact-https  20003/udp               # Commtact HTTPS
 openwebnet      20005/tcp               # OpenWebNet protocol for electric network
 openwebnet      20005/udp               # OpenWebNet protocol for electric network
+ss-idi-disc     20012/udp               # Samsung Interdevice Interaction discovery
+ss-idi          20013/tcp               # Samsung Interdevice Interaction
 opendeploy      20014/tcp               # OpenDeploy Listener
 opendeploy      20014/udp               # OpenDeploy Listener
 nburn_id        20034/tcp               # NetBurner ID Port
@@ -10715,6 +10761,7 @@ kingdomsonline  30260/udp               # Kingdoms Online (CraigAvenue)
 ovobs           30999/tcp               # OpenView Service Desk Client
 ovobs           30999/udp               # OpenView Service Desk Client
 autotrac-acp    31020/tcp               # Autotrac ACP 245
+yawn            31029/udp               # YaWN - Yet Another Windows Notifie
 xqosd           31416/tcp               # XQoS network monitor
 xqosd           31416/udp               # XQoS network monitor
 tetrinet        31457/tcp               # TetriNET Protocol
@@ -10762,6 +10809,7 @@ filenet-obrok   32777/tcp               # FileNet BPM CORBA
 filenet-obrok   32777/udp               # FileNet BPM CORBA
 mlsn            32801/tcp               # Multiple Listing Service Network
 mlsn            32801/udp               # Multiple Listing Service Network
+retp            32811/tcp               # Real Estate Transport Protocol
 idmgratm        32896/tcp               # Attachmate ID Manager
 idmgratm        32896/udp               # Attachmate ID Manager
 aurora-balaena  33123/tcp               # Aurora (Balaena Ltd)
@@ -10840,6 +10888,7 @@ pmcd            44321/tcp               # PCP server (pmcd)
 pmcd            44321/udp               # PCP server (pmcd)
 pmcdproxy       44322/tcp               # PCP server (pmcd) proxy
 pmcdproxy       44322/udp               # PCP server (pmcd) proxy
+### UNAUTHORIZED USE: Ports 44515 & 44516 used by NI Device Protocol############
 rbr-debug       44553/tcp               # REALbasic Remote Debug
 rbr-debug       44553/udp               # REALbasic Remote Debug
 EtherNet/IP-2   44818/tcp               # EtherNet/IP messaging
