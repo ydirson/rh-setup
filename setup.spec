@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.28
+Version: 2.8.29
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 for i, name in ipairs({"passwd", "shadow", "group", "gshadow"}) do
      os.remove("/etc/"..name..".rpmnew")
 end
+if posix.access("/usr/bin/newaliases", "x") then
+  os.execute("/usr/bin/newaliases")
+end
 
 %files
 %defattr(-,root,root,-)
@@ -89,6 +92,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Fri Dec 03 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.29-1
+- run newaliases in the post to prevent sendmail messages
+  about old alias database in the log(#658921)
+
 * Fri Nov 12 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.28-1
 - update services and protocols to latest IANA reservations
 - reserve uidgid pair 109:109 for rhevm(#652287)
