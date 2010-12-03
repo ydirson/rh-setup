@@ -57,7 +57,7 @@ for i, name in ipairs({"passwd", "shadow", "group", "gshadow"}) do
      os.remove("/etc/"..name..".rpmnew")
 end
 if posix.access("/usr/bin/newaliases", "x") then
-  os.execute("/usr/bin/newaliases")
+  os.execute("/usr/bin/newaliases >/dev/null")
 end
 
 %files
