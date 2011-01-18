@@ -1,12 +1,11 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.29
+Version: 2.8.30
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
 URL: https://fedorahosted.org/setup/
 Source0: https://fedorahosted.org/releases/s/e/%{name}/%{name}-%{version}.tar.bz2
-Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 BuildRequires: bash tcsh perl
 Conflicts: initscripts < 4.26, bash <= 2.0.4-21
@@ -92,6 +91,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Tue Jan 18 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.30-1
+- remove explicit buildroot
+- reserve uidgid pair 173:173 for abrt(#670231)
+
 * Fri Dec 03 2010 Ondrej Vasik <ovasik@redhat.com> 2.8.29-1
 - run newaliases in the post to prevent sendmail messages
   about old alias database in the log(#658921)
