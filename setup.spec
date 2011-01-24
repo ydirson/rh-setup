@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.30
+Version: 2.8.31
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -88,9 +88,11 @@ end
 %config(noreplace) %verify(not md5 size mtime) /etc/shells
 %ghost %attr(0644,root,root) %verify(not md5 size mtime) /var/log/lastlog
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
-%ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/mtab
 
 %changelog
+* Mon Jan 24 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.31-1
+- drop ownership of /etc/mtab, now owned by util-linux
+
 * Tue Jan 18 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.30-1
 - remove explicit buildroot
 - reserve uidgid pair 173:173 for abrt(#670231)
