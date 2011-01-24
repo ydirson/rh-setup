@@ -37,7 +37,6 @@ chmod 0644 %{buildroot}/etc/environment
 chmod 0400 %{buildroot}/etc/{shadow,gshadow}
 chmod 0644 %{buildroot}/var/log/lastlog
 touch %{buildroot}/etc/fstab
-touch %{buildroot}/etc/mtab
 
 # remove unpackaged files from the buildroot
 rm -f %{buildroot}/etc/Makefile
