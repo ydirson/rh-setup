@@ -15,7 +15,7 @@ for infile in "$@" ; do
 		fi
 	done
 	for gid in $gidlist ; do
-		if test `tail -n +2 "$infile" | awk '{print $3}' | grep '^'"$uid"'$' | wc -l` -ne 1 ; then
+		if test `tail -n +2 "$infile" | awk '{print $3}' | grep '^'"$gid"'$' | wc -l` -ne 1 ; then
 			echo Duplicate GID: $gid
 			exit 1
 		fi
