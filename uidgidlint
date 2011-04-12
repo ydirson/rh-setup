@@ -4,6 +4,7 @@ if [ -z "$*" ] ; then
 	echo Usage: `basename $0` uidgid
 	exit 1
 fi
+error=0
 # The format of the file is (currently)
 for infile in "$@" ; do
 	uidlist=`tail -n +2 "$infile" | awk '{print $2}' | grep -v '?' | grep -v -e - | sort -nu`
@@ -11,14 +12,14 @@ for infile in "$@" ; do
 	for uid in $uidlist ; do
 		if test `tail -n +2 "$infile" | awk '{print $2}' | grep '^'"$uid"'$' | wc -l` -ne 1 ; then
 			echo Duplicate UID: $uid
-			exit 1
+			error=1
 		fi
 	done
 	for gid in $gidlist ; do
 		if test `tail -n +2 "$infile" | awk '{print $3}' | grep '^'"$gid"'$' | wc -l` -ne 1 ; then
 			echo Duplicate GID: $gid
-			exit 1
+			error=1
 		fi
 	done
 done
-exit 0
+exit $error
