@@ -548,7 +548,7 @@ postgres        5432/tcp        postgresql      # POSTGRES
 postgres        5432/udp        postgresql      # POSTGRES
 fax             4557/tcp                        # FAX transmission service        (old)
 hylafax         4559/tcp                        # HylaFAX client-server protocol  (new)
-sgi-dgl         5232/tcp                        # SGI Distributed Graphics
+sgi-dgl         5232/tcp        csedaemon       # SGI Distributed Graphics
 sgi-dgl         5232/udp
 hostmon         5355/tcp        llmnr           # hostmon uses TCP (nocol)
 hostmon         5355/udp        llmnr           # hostmon uses TCP (nocol)
@@ -8474,7 +8474,6 @@ hp-status       5226/udp                # HP Status
 perfd           5227/tcp                # HP System Performance Metric Service
 perfd           5227/udp                # HP System Performance Metric Service
 hpvroom         5228/tcp                # HP Virtual Room Service
-csedaemon       5232/tcp                # Cruse Scanning System Service
 enfs            5233/tcp                # Etinnae Network File Service
 eenet           5234/tcp                # EEnet communications
 eenet           5234/udp                # EEnet communications
