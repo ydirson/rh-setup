@@ -43,7 +43,7 @@ fax:		root
 quagga:		root
 radvd:		root
 pvm:		root
-amanda:		root
+amandabackup:		root
 privoxy:	root
 ident:		root
 named:		root
