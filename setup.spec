@@ -89,9 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
-* Tue May 17 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.33-1
+* Thu May 19 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.33-1
 - reflect the reserved username change of amanda
   to amandabackup (#700807)
+- drop order hosts,bind from setup, no longer used by
+  glibc (#703049)
 
 * Tue Apr 12 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.32-1
 - do not override already set PROMPT_COMMAND envvar(#691425)
