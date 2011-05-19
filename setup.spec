@@ -94,6 +94,8 @@ end
   to amandabackup (#700807)
 - drop order hosts,bind from setup, no longer used by
   glibc (#703049)
+- assign 174:174 uidgid for user/group retrace
+  (abrt retrace-server, #706012)
 
 * Tue Apr 12 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.32-1
 - do not override already set PROMPT_COMMAND envvar(#691425)

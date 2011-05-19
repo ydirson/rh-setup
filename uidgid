@@ -123,6 +123,7 @@ avahi-autoipd	170	170	/var/lib/avahi-autoipd		/sbin/nologin	avahi
 pulse	171	171	/var/run/pulse		/sbin/nologin	pulseaudio
 rtkit	172	172	/proc		/sbin/nologin	rtkit
 abrt	173	173	/etc/abrt		/sbin/nologin	abrt
+retrace	174	174	/usr/share/retrace-server	/sbin/nologin	retrace-server
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
