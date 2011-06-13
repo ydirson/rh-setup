@@ -7945,7 +7945,7 @@ mcp             4458/udp                # Matrix Configuration Protocol
 hpssmgmt        4484/tcp                # hpssmgmt service
 hpssmgmt        4484/udp                # hpssmgmt service
 assyst-dr       4485/tcp                # Assyst Data Repository Service
-icms            4486/tcp                # Integrated Client Message Service 
+icms            4486/tcp                # Integrated Client Message Service
 icms            4486/udp                # Integrated Client Message Service
 prex-tcp        4487/tcp                # Protocol for Remote Execution over TCP
 awacs-ice       4488/tcp                # Apple Wide Area Connectivity Service ICE Bootstrap
@@ -8546,7 +8546,7 @@ opalis-rbt-ipc  5314/tcp                # opalis-rbt-ipc
 opalis-rbt-ipc  5314/udp                # opalis-rbt-ipc
 hacl-poll       5315/tcp                # HA Cluster UDP Polling
 hacl-poll       5315/udp                # HA Cluster UDP Polling
-hpbladems       5316/tcp                # HPBladeSystem Monitor Service 
+hpbladems       5316/tcp                # HPBladeSystem Monitor Service
 hpdevms         5317/tcp                # HP Device Monitor Service
 bsfserver-zn    5320/tcp                # Webservices-based Zn interface of BSF
 bsfsvr-zn-ssl   5321/tcp                # Webservices-based Zn interface of BSF over SSL
@@ -8939,7 +8939,7 @@ directplay8     6073/udp                # DirectPlay8
 max             6074/tcp                # Microsoft Max
 max             6074/udp                # Microsoft Max
 dpm-acm         6075/tcp                # Microsoft DPM Access Control Manager
-p25cai          6082/udp                # APCO Project 25 Common Air Interface 
+p25cai          6082/udp                # APCO Project 25 Common Air Interface
 miami-bcast     6083/udp                # telecomsoftware miami broadcast
 p2p-sip         6084/tcp                # Peer to Peer Infrastructure Protocol
 konspire2b      6085/tcp                # konspire2b p2p network
@@ -10414,7 +10414,7 @@ powwow-client   13223/udp               # PowWow Client
 powwow-server   13224/tcp               # PowWow Server
 powwow-server   13224/udp               # PowWow Server
 doip-data       13400/tcp               # DoIP Data
-doip-disc       13400/udp               # DoIP Discovery 
+doip-disc       13400/udp               # DoIP Discovery
 nbdb            13785/tcp               # NetBackup Database
 nbdb            13785/udp               # NetBackup Database
 nomdb           13786/tcp               # Veritas-nomdb
