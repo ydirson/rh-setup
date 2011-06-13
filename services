@@ -1,8 +1,8 @@
 # /etc/services:
-# $Id: services,v 1.52 2011/04/12 16:19:32 ovasik Exp $
+# $Id: services,v 1.53 2011/06/13 15:00:06 ovasik Exp $
 #
 # Network services, Internet style
-# IANA services version: last updated 2011-04-06
+# IANA services version: last updated 2011-06-10
 #
 # Note that it is presently the policy of IANA to assign a single well-known
 # port number for both TCP and UDP; hence, most entries here have two entries
@@ -34,8 +34,8 @@ daytime         13/tcp
 daytime         13/udp
 qotd            17/tcp          quote
 qotd            17/udp          quote
-msp             18/tcp                          # message send protocol
-msp             18/udp                          # message send protocol
+msp             18/tcp                          # message send protocol (historic)
+msp             18/udp                          # message send protocol (historic)
 chargen         19/tcp          ttytst source
 chargen         19/udp          ttytst source
 ftp-data        20/tcp
@@ -6643,8 +6643,8 @@ hp-dataprotect  3612/tcp                # HP Data Protector
 hp-dataprotect  3612/udp                # HP Data Protector
 alaris-disc     3613/tcp                # Alaris Device Discovery
 alaris-disc     3613/udp                # Alaris Device Discovery
-sigma-port      3614/tcp                # Invensys Sigma Port
-sigma-port      3614/udp                # Invensys Sigma Port
+sigma-port      3614/tcp                # Satchwell Sigma
+sigma-port      3614/udp                # Satchwell Sigma
 start-network   3615/tcp                # Start Messaging Network
 start-network   3615/udp                # Start Messaging Network
 cd3o-protocol   3616/tcp                # cd3o Control Protocol
@@ -7057,8 +7057,8 @@ acp-policy      3824/tcp                # Compute Pool Policy
 acp-policy      3824/udp                # Compute Pool Policy
 ffserver        3825/tcp                # Antera FlowFusion Process Simulation
 ffserver        3825/udp                # Antera FlowFusion Process Simulation
-wormux          3826/tcp                # Wormux server
-wormux          3826/udp                # Wormux server
+warmux          3826/tcp                # WarMUX game server
+warmux          3826/udp                # WarMUX game server
 netmpi          3827/tcp                # Netadmin Systems MPI service
 netmpi          3827/udp                # Netadmin Systems MPI service
 neteh           3828/tcp                # Netadmin Systems Event Handler
@@ -8144,6 +8144,7 @@ bfd-multi-ctl   4784/udp                # BFD Multihop Control
 cncp            4785/udp                # Cisco Nexus Control Protocol
 smart-install   4786/tcp                # Smart Install Service
 sia-ctrl-plane  4787/tcp                # Service Insertion Architecture (SIA) Control-Plane
+xmcp            4788/tcp                # eXtensible Messaging Client Protocol
 iims            4800/tcp                # Icona Instant Messenging System
 iims            4800/udp                # Icona Instant Messenging System
 iwec            4801/tcp                # Icona Web Embedded Chat
@@ -8545,8 +8546,8 @@ opalis-rbt-ipc  5314/tcp                # opalis-rbt-ipc
 opalis-rbt-ipc  5314/udp                # opalis-rbt-ipc
 hacl-poll       5315/tcp                # HA Cluster UDP Polling
 hacl-poll       5315/udp                # HA Cluster UDP Polling
-hpdevms         5316/tcp                # HP Device Monitor Service
-hpdevms         5316/udp                # HP Device Monitor Service
+hpbladems       5316/tcp                # HPBladeSystem Monitor Service 
+hpdevms         5317/tcp                # HP Device Monitor Service
 bsfserver-zn    5320/tcp                # Webservices-based Zn interface of BSF
 bsfsvr-zn-ssl   5321/tcp                # Webservices-based Zn interface of BSF over SSL
 kfserver        5343/tcp                # Sculptor Database Server
@@ -8884,12 +8885,16 @@ rfb             5900/tcp                # Remote Framebuffer
 rfb             5900/udp                # Remote Framebuffer
 cm              5910/tcp                # Context Management
 cm              5910/udp                # Context Management
+cm              5910/sctp               # Context Management
 cpdlc           5911/tcp                # Controller Pilot Data Link Communication
 cpdlc           5911/udp                # Controller Pilot Data Link Communication
+cpdlc           5911/sctp               # Controller Pilot Data Link Communication
 fis             5912/tcp                # Flight Information Services
 fis             5912/udp                # Flight Information Services
+fis             5912/sctp               # Flight Information Services
 ads-c           5913/tcp                # Automatic Dependent Surveillance
 ads-c           5913/udp                # Automatic Dependent Surveillance
+ads-c           5913/sctp               # Automatic Dependent Surveillance
 indy            5963/tcp                # Indy Application Server
 indy            5963/udp                # Indy Application Server
 mppolicy-v5     5968/tcp                # mppolicy-v5
@@ -8920,8 +8925,7 @@ winpharaoh      6065/tcp                # WinPharaoh
 winpharaoh      6065/udp                # WinPharaoh
 ewctsp          6066/tcp                # EWCTSP
 ewctsp          6066/udp                # EWCTSP
-gsmp            6068/tcp                # GSMP
-gsmp            6068/udp                # GSMP
+gsmp-ancp       6068/tcp                # GSMP/ANCP
 trip            6069/tcp                # TRIP
 trip            6069/udp                # TRIP
 messageasap     6070/tcp                # Messageasap
@@ -8935,6 +8939,7 @@ directplay8     6073/udp                # DirectPlay8
 max             6074/tcp                # Microsoft Max
 max             6074/udp                # Microsoft Max
 dpm-acm         6075/tcp                # Microsoft DPM Access Control Manager
+p25cai          6082/udp                # APCO Project 25 Common Air Interface 
 miami-bcast     6083/udp                # telecomsoftware miami broadcast
 p2p-sip         6084/tcp                # Peer to Peer Infrastructure Protocol
 konspire2b      6085/tcp                # konspire2b p2p network
@@ -9294,6 +9299,8 @@ acctopus-st     6868/udp                # Acctopus Status
 muse            6888/tcp                # MUSE
 muse            6888/udp                # MUSE
 jetstream       6901/tcp                # Novell Jetstream messaging protocol
+ethoscan        6935/tcp                # EthoScan Service
+ethoscan        6935/udp                # EthoScan Service
 xsmsvc          6936/tcp                # XenSource Management Service
 xsmsvc          6936/udp                # XenSource Management Service
 bioserver       6946/tcp                # Biometrics Server
@@ -9332,6 +9339,9 @@ microtalon-com  7014/tcp                # Microtalon Communications
 microtalon-com  7014/udp                # Microtalon Communications
 talon-webserver 7015/tcp                # Talon Webserver
 talon-webserver 7015/udp                # Talon Webserver
+fisa-svc        7018/tcp                # FISA Service
+doceri-ctl      7019/tcp                # doceri drawing service control
+doceri-view     7019/udp                # doceri drawing service screen view
 dpserve         7020/tcp                # DP Serve
 dpserve         7020/udp                # DP Serve
 dpserveadmin    7021/tcp                # DP Serve Admin
@@ -9468,6 +9478,7 @@ silhouette      7500/tcp                # Silhouette User
 silhouette      7500/udp                # Silhouette User
 ovbus           7501/tcp                # HP OpenView Bus Daemon
 ovbus           7501/udp                # HP OpenView Bus Daemon
+adcp            7508/tcp                # Automation Device Configuration Protocol
 acplt           7509/tcp                # ACPLT - process automation service
 ovhpas          7510/tcp                # HP OpenView Application Server
 ovhpas          7510/udp                # HP OpenView Application Server
@@ -9657,6 +9668,7 @@ ampify          8040/udp                # Ampify Messaging Protocol
 fs-agent        8042/tcp                # FireScope Agent
 fs-server       8043/tcp                # FireScope Server
 fs-mgmt         8044/tcp                # FireScope Management Interface
+rocrail         8051/tcp                # Rocrail Client Service
 senomix01       8052/tcp                # Senomix Timesheets Server
 senomix01       8052/udp                # Senomix Timesheets Server
 senomix02       8053/tcp                # Senomix Timesheets Client [1 year assignment]
@@ -9713,10 +9725,12 @@ dbabble         8132/tcp                # dbabble
 dbabble         8132/udp                # dbabble
 isdd            8148/tcp                # i-SDD file transfer
 isdd            8148/udp                # i-SDD file transfer
+eor-game        8149/udp                # Edge of Reality game data
 patrol          8160/tcp                # Patrol
 patrol          8160/udp                # Patrol
 patrol-snmp     8161/tcp                # Patrol SNMP
 patrol-snmp     8161/udp                # Patrol SNMP
+intermapper     8181/tcp                # Intermapper network management system
 vmware-fdm      8182/tcp                # VMware Fault Domain Manager
 vmware-fdm      8182/udp                # VMware Fault Domain Manager
 proremote       8183/tcp                # ProRemote
@@ -9812,6 +9826,8 @@ noteshare       8474/tcp                # AquaMinds NoteShare
 noteshare       8474/udp                # AquaMinds NoteShare
 fmtp            8500/tcp                # Flight Message Transfer Protocol
 fmtp            8500/udp                # Flight Message Transfer Protocol
+cmtp-mgt        8501/tcp                # CYTEL Message Transfer Management
+cmtp-av         8501/udp                # CYTEL Message Transfer Audio and Video
 rtsp-alt        8554/tcp                # RTSP Alternate (see port 554)
 rtsp-alt        8554/udp                # RTSP Alternate (see port 554)
 d-fence         8555/tcp                # SYMAX D-FENCE
@@ -9888,6 +9904,7 @@ wcbackup        8912/udp                # Windows Client Backup
 dragonfly       8913/tcp                # Dragonfly System Service
 dragonfly       8913/udp                # Dragonfly System Service
 twds            8937/tcp                # Transaction Warehouse Data Service
+ub-dns-control  8953/tcp                # unbound dns nameserver control
 cumulus-admin   8954/tcp                # Cumulus Admin Port
 cumulus-admin   8954/udp                # Cumulus Admin Port
 sunwebadmins    8989/tcp                # Sun Web Server SSL Admin Service
@@ -10357,10 +10374,10 @@ dbisamserver1   12005/tcp               # DBISAM Database Server - Regular
 dbisamserver1   12005/udp               # DBISAM Database Server - Regular
 dbisamserver2   12006/tcp               # DBISAM Database Server - Admin
 dbisamserver2   12006/udp               # DBISAM Database Server - Admin
-accuracer       12007/tcp               # Accuracer Database System ñ Server
-accuracer       12007/udp               # Accuracer Database System ñ Server
-accuracer-dbms  12008/tcp               # Accuracer Database System ñ Admin
-accuracer-dbms  12008/udp               # Accuracer Database System ñ Admin
+accuracer       12007/tcp               # Accuracer Database System √± Server
+accuracer       12007/udp               # Accuracer Database System √± Server
+accuracer-dbms  12008/tcp               # Accuracer Database System √± Admin
+accuracer-dbms  12008/udp               # Accuracer Database System √± Admin
 edbsrvr         12010/tcp               # ElevateDB Server
 vipera          12012/tcp               # Vipera Messaging Service
 vipera          12012/udp               # Vipera Messaging Service
@@ -10619,6 +10636,7 @@ athand-mmp      20999/tcp               # At Hand MMP
 athand-mmp      20999/udp               # AT Hand MMP
 irtrans         21000/tcp               # IRTrans Control
 irtrans         21000/udp               # IRTrans Control
+rdm-tfs         21553/tcp               # Raima RDM TFS
 dfserver        21554/tcp               # MineScape Design File Server
 dfserver        21554/udp               # MineScape Design File Server
 vofr-gateway    21590/tcp               # VoFR Gateway
@@ -10876,6 +10894,7 @@ s1-control      36412/sctp              # S1-Control Plane (3GPP)
 x2-control      36422/sctp              # X2-Control Plane (3GPP)
 m2ap            36443/sctp              # M2 Application Part
 m3ap            36444/sctp              # M3 Application Part
+febooti-aw      36524/tcp               # Febooti Automation Workshop
 kastenxpipe     36865/tcp               # KastenX Pipe
 kastenxpipe     36865/udp               # KastenX Pipe
 neckar          37475/tcp               # science + computing's Venus Administration Port
