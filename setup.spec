@@ -90,6 +90,7 @@ end
 
 %changelog
 * Mon Jun 13 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.34-1
+- update protocols and services to latest IANA
 - reserve 175:175 for rhevagent (#709599)
 
 * Thu May 19 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.33-1

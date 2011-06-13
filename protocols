@@ -1,5 +1,5 @@
 # /etc/protocols:
-# $Id: protocols,v 1.10 2010/03/26 13:05:40 ovasik Exp $
+# $Id: protocols,v 1.11 2011/05/03 14:45:40 ovasik Exp $
 #
 # Internet (IP) protocols
 #
@@ -148,7 +148,7 @@ pipe	131	PIPE		# Private IP Encapsulation within IP
 sctp	132	SCTP		# Stream Control Transmission Protocol
 fc	133	FC		# Fibre Channel
 rsvp-e2e-ignore	134	RSVP-E2E-IGNORE
-#	135			# Mobility Header
+mobility-header	135	Mobility-Header		# Mobility Header
 udplite	136	UDPLite
 mpls-in-ip	137	MPLS-in-IP
 manet	138	manet		# MANET Protocols
