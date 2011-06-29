@@ -125,6 +125,7 @@ rtkit	172	172	/proc		/sbin/nologin	rtkit
 abrt	173	173	/etc/abrt		/sbin/nologin	abrt
 retrace	174	174	/usr/share/retrace-server		/sbin/nologin	retrace-server
 rhevagent	175	175	/		/sbin/nologin	rhev-agent
+ats	176	176	/		/sbin/nologin	trafficserver
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
