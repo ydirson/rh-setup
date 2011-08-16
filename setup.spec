@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.36
+Version: 2.8.37
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Tue Aug 16 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.37-1
+- dropped all suplemental groups from basic /etc/group file
+  (#722529)
+
 * Tue Aug 16 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.36-1
 - dropped suplemental root's groups(#722529)
 
