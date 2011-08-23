@@ -21,3 +21,9 @@ tty8
 tty9
 tty10
 tty11
+hvc0
+hvc1
+hvsi0
+hvsi1
+hvsi2
+xvc0

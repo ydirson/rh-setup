@@ -584,7 +584,7 @@ fido            60179/udp                       # Ifmail
 
 
 # Updated additional list from IANA with all missing services 04/07/2008
-spr-itunes      0/tcp   spl-itunes      # Shirt Pocket netTunes
+#spr-itunes      0/tcp   spl-itunes      # Shirt Pocket netTunes - no port allocated
 compressnet     2/tcp                   # Management Utility
 compressnet     2/udp                   # Management Utility
 #compressnet    3/tcp                   # Compression Process
