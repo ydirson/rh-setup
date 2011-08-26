@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.38
+Version: 2.8.39
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Fri Aug 26 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.39-1
+- reserve 177:177 for dhcpd (dhcp) - #699713
+
 * Tue Aug 23 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.38-1
 - reserve 160:160 for swift (openstack-swift) - #732442
 - reserve 161:161 for glance (openstack-glance) - #732442
