@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.41
+Version: 2.8.42
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Wed Nov  2 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.42-1
+- add ext4 to /etc/filesystems - #750506
+
 * Wed Sep 14 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.41-1
 - reserve 179:179 for sanlock - #727655
 
