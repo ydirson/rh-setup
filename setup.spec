@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Fri Nov 11 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.43-1
+- gopher home dir in uidgid should be /var/gopher (#752885)
+
 * Wed Nov  2 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.42-1
 - add ext4 to /etc/filesystems - #750506
 

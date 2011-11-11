@@ -19,7 +19,7 @@ news	9	13	/var/spool/news		/sbin/nologin	setup
 uucp	10	14	/var/spool/uucp		/sbin/nologin	setup
 operator	11	(0)	/root		/sbin/nologin	setup
 games	12	(100)	/usr/games		/sbin/nologin	setup
-gopher	13	30	/usr/lib/gopher-data		/sbin/nologin	setup
+gopher	13	30	/var/gopher		/sbin/nologin	setup
 ftp	14	50	/var/ftp		/sbin/nologin	setup
 man	-	15	-		-	setup
 oprofile	16	16	/home/oprofile		/sbin/nologin	oprofile
