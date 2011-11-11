@@ -634,8 +634,8 @@ covia           64/tcp                  # Communications Integrator (CI)
 covia           64/udp                  # Communications Integrator (CI)
 tacacs-ds       65/tcp                  # TACACS-Database Service
 tacacs-ds       65/udp                  # TACACS-Database Service
-sql*net         66/tcp    sql-net       # Oracle SQL*NET
-sql*net         66/udp    sql-net       # Oracle SQL*NET
+sql*net         66/tcp                  # Oracle SQL*NET
+sql*net         66/udp                  # Oracle SQL*NET
 deos            76/tcp                  # Distributed External Object Store
 deos            76/udp                  # Distributed External Object Store
 vettcp          78/tcp                  # vettcp
