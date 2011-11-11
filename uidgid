@@ -122,6 +122,8 @@ stap-server	155	155	/var/lib/stap-server		/sbin/nologin	systemtap
 swift	160	160	/var/lib/swift		/sbin/nologin	openstack-swift
 glance	161	161	/var/lib/glance		/sbin/nologin	openstack-glance
 nova	162	162	/var/lib/nova		/sbin/nologin	openstack-nova
+keystone	163	163	/var/lib/keystone		/sbin/nologin	openstack-keystone
+quantum	164	164	/var/lib/quantum		/sbin/nologin	openstack-quantum
 avahi-autoipd	170	170	/var/lib/avahi-autoipd		/sbin/nologin	avahi
 pulse	171	171	/var/run/pulse		/sbin/nologin	pulseaudio
 rtkit	172	172	/proc		/sbin/nologin	rtkit
