@@ -93,6 +93,7 @@ end
 - gopher home dir in uidgid should be /var/gopher - #752885
 - reserve 163:163 for keystone (openstack-keystone) - #752842
 - reserve 164:164 for quantum (openstack-quantum) - #752842
+- update services to latest IANA
 
 * Wed Nov  2 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.42-1
 - add ext4 to /etc/filesystems - #750506
