@@ -7209,7 +7209,7 @@ senip           3898/tcp                # IAS, Inc. SmartEye NET Internet Protoc
 senip           3898/udp                # IAS, Inc. SmartEye NET Internet Protocol
 itv-control     3899/tcp                # ITV Port
 itv-control     3899/udp                # ITV Port
-                                        # 3900 tcp/udp reserved udt-os/udt_os
+### 3900 tcp/udp reserved udt-os/udt_os
 nimsh           3901/tcp                # NIM Service Handler
 nimsh           3901/udp                # NIM Service Handler
 nimaux          3902/tcp                # NIMsh Auxiliary Port
