@@ -134,6 +134,7 @@ ats	176	176	/		/sbin/nologin	trafficserver
 dhcpd	177	177	/		/sbin/nologin	dhcp
 myproxy	178	178	/var/lib/myproxy		/sbin/nologin	myproxy-server
 sanlock	179	179	/var/run/sanlock		/sbin/nologin	sanlock
+aeolus	180	180	/var/aeolus		/sbin/nologin	aeolus-configure
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils

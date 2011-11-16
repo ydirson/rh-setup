@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.43
+Version: 2.8.44
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Wed Nov 16 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.44-1
+- reserve 180:180 for aeolus - #754274
+
 * Fri Nov 11 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.43-1
 - gopher home dir in uidgid should be /var/gopher - #752885
 - reserve 163:163 for keystone (openstack-keystone) - #752842
