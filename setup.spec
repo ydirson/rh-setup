@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.44
+Version: 2.8.45
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Fri Nov 25 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.45-1
+- reserve :156 groupid for stapusr - #756807
+- reserve :157 groupid for stapsys - #756807
+- reserve :158 groupid for stapdev - #756807
+
 * Wed Nov 16 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.44-1
 - reserve 180:180 for aeolus - #754274
 

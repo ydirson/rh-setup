@@ -119,6 +119,9 @@ bacula	133	133	/var/spool/bacula		/sbin/nologin	bacula
 ricci	140	140	/var/lib/ricci		/sbin/nologin	ricci
 luci	141	141	/var/lib/luci		/sbin/nologin	luci
 stap-server	155	155	/var/lib/stap-server		/sbin/nologin	systemtap
+stapusr	-	156	/		-	systemtap-runtime
+stapsys	-	157	/		-	systemtap-runtime
+stapdev	-	158	/		-	systemtap-runtime
 swift	160	160	/var/lib/swift		/sbin/nologin	openstack-swift
 glance	161	161	/var/lib/glance		/sbin/nologin	openstack-glance
 nova	162	162	/var/lib/nova		/sbin/nologin	openstack-nova
