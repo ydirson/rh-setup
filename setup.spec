@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.45
+Version: 2.8.46
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -89,6 +89,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Tue Dec 06 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.46-1
+- reserve 134:134 uidgid pair for cimsrvr (#760178)
+
 * Fri Nov 25 2011 Ondrej Vasik <ovasik@redhat.com> 2.8.45-1
 - reserve :156 groupid for stapusr - #756807
 - reserve :157 groupid for stapsys - #756807
@@ -489,7 +492,7 @@ end
 
 * Mon Jun 20 2005 Bill Nottingham <notting@redhat.com> 2.5.46-1
 - add buildrequires on bash, tcsh (#161016)
-- move core dump size setting from csh.login to csh.cshrc (#156914) 
+- move core dump size setting from csh.login to csh.cshrc (#156914)
 
 * Fri Jun 17 2005 Bill Nottingham <notting@redhat.com> 2.5.45-1
 - ksh doesn't implement EUID/UID. Work around that. (#160731)
@@ -570,7 +573,7 @@ end
 - allocate uid/gid for mgetty
 
 * Thu Jan  9 2003 Dan Walsh <dwalsh@redhat.com> 2.5.23-1
-- added PXE to /etc/services 
+- added PXE to /etc/services
 
 * Wed Jan  1 2003 Bill Nottingham <notting@redhat.com> 2.5.22-1
 - remove bogus entries from inputrc (#80652)
@@ -853,10 +856,10 @@ end
 - added alias pointing to imap from imap2
 
 * Tue Mar 23 1999 Preston Brown <pbrown@redhat.com>
-- updated protocols/services from debian to comply with more modern 
+- updated protocols/services from debian to comply with more modern
 - IETF/RFC standards
 
-* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com> 
+* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com>
 - auto rebuild in the new build environment (release 4)
 
 * Thu Feb 18 1999 Jeff Johnson <jbj@redhat.com>
