@@ -139,6 +139,7 @@ dhcpd	177	177	/		/sbin/nologin	dhcp
 myproxy	178	178	/var/lib/myproxy		/sbin/nologin	myproxy-server
 sanlock	179	179	/var/run/sanlock		/sbin/nologin	sanlock
 aeolus	180	180	/var/aeolus		/sbin/nologin	aeolus-configure
+wallaby	181	181	/var/lib/wallaby		/sbin/nologin	wallaby
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
