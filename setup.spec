@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.48
+Version: 2.8.49
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -11,6 +11,7 @@ BuildRequires: bash tcsh perl
 # RPM runtime check in the buildroot; this ensures we can not install the
 # incompatible setup.rpm on unconverted systems
 Requires: rpmlib(X-CheckUnifiedSystemdir)
+Conflicts: filesystem < 3
 Conflicts: initscripts < 4.26, bash <= 2.0.4-21
 
 %description
@@ -92,6 +93,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Tue Feb 21 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.49-1
+- conflict with filesystems before usrmove change
+
 * Sun Feb 12 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.48-1
 - remove /bin and /sbin from /etc/profile(#789616)
 - require usrmove
