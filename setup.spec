@@ -94,7 +94,8 @@ end
 
 %changelog
 * Mon Mar 19 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.50-1
-- reserve 182:182 for katello (#804205)
+- reserve 182:182 for katello (#804204)
+- reserve 183:183 for elasticsearch (#804205)
 
 * Tue Feb 21 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.49-1
 - conflict with filesystems before usrmove change
