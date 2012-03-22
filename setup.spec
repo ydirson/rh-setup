@@ -93,6 +93,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Thu Mar 22 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.51-1
+- do not throw away the stderr output of profile.d scripts
+  in noninteractive bash/ksh sessions(#805507)
+
 * Mon Mar 19 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.50-1
 - reserve 182:182 for katello (#804204)
 - reserve 183:183 for elasticsearch (#804205)
