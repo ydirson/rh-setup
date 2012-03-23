@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.51
+Version: 2.8.52
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Fri Mar 23 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.52-1
+- reserve 184:184 for mongodb (#806052)
+
 * Thu Mar 22 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.51-1
 - do not throw away the stderr output of profile.d scripts
   in noninteractive bash/ksh sessions(#805507)
