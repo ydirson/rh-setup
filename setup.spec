@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.52
+Version: 2.8.53
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Wed Apr 11 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.53-1
+- reserve 185:185 for jboss-as (#809398)
+
 * Fri Mar 23 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.52-1
 - reserve 184:184 for mongodb (#806052)
 
