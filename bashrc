@@ -81,6 +81,6 @@ if ! shopt -q login_shell ; then # We're not a login shell
     done
 
     unset i
-    unset pathmunge
+    unset -f pathmunge
 fi
 # vim:ts=4:sw=4
