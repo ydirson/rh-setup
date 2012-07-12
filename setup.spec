@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.54
+Version: 2.8.55
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Thu Jul 12 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.55-1
+- reserve 186 uid for jbosson-agent user, reserve 186 gid
+  for jbosson group (#839410)
+
 * Fri May 11 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.54-1
 - use unset -f pathmunge in /etc/profile to work more nicely
   with ksh (#791140)

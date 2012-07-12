@@ -144,6 +144,8 @@ katello	182	182	/usr/share/katello		/sbin/nologin	katello-common
 elasticsearch	183	183	/usr/share/java/elasticsearch		/sbin/nologin	elasticsearch
 mongodb	184	184	/var/lib/mongodb		/sbin/nologin	mongodb
 jboss-as	185	185	/usr/share/jboss-as		/sbin/nologin	jboss-as
+jbosson-agent	186	-	/		/sbin/nologin	jboss-on-agent
+jbosson	-	186	-		-	jboss-on-agent
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
