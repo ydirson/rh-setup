@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.57
+Version: 2.8.58
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Mon Aug 21 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.58-1
+- reserve 110:110 for jetty (#849927)
+
 * Mon Aug 06 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.57-1
 - reserve 187:187 for openstack-heat (#845078)
 
