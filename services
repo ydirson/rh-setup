@@ -10252,7 +10252,7 @@ iua             9900/sctp               # IUA
 enrp            9901/udp                # enrp server channel
 enrp-sctp       9901/sctp               # enrp server channel
 enrp-sctp-tls   9902/sctp               # enrp/tls server channel
-multicast-ping  9903/udp                # Multicast Ping Protocol
+multicast-ping  9903/tcp                # Multicast Ping Protocol
 multicast-ping  9903/udp                # Multicast Ping Protocol
 domaintime      9909/tcp                # domaintime
 domaintime      9909/udp                # domaintime
