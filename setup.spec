@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.59
+Version: 2.8.60
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Tue Oct 02 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.60-1
+- reserve 188:188 for haproxy (#860221)
+
 * Wed Sep 19 2012 Ondrej Vasik <ovasik@redhat.com> 2.8.59-1
 - update /etc/services to match with latest IANA
   assignments
