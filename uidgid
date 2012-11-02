@@ -149,6 +149,8 @@ jbosson-agent	186	-	/		/sbin/nologin	jboss-on-agent
 jbosson	-	186	-		-	jboss-on-agent
 openstack-heat	187	187	/var/lib/heat		/sbin/nologin	heat
 haproxy	188	188	/var/lib/haproxy		/sbin/nologin	haproxy
+hacluster	189	-	/		/sbin/nologin	pacemaker
+haclient	-	189	-		-	pacemaker
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
