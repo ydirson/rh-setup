@@ -134,7 +134,7 @@ pulse	171	171	/var/run/pulse		/sbin/nologin	pulseaudio
 rtkit	172	172	/proc		/sbin/nologin	rtkit
 abrt	173	173	/etc/abrt		/sbin/nologin	abrt
 retrace	174	174	/usr/share/retrace-server		/sbin/nologin	retrace-server
-rhevagent	175	175	/		/sbin/nologin	rhev-agent
+ovirtagent	175	175	/		/sbin/nologin	rhev-agent
 ats	176	176	/		/sbin/nologin	trafficserver
 dhcpd	177	177	/		/sbin/nologin	dhcp
 myproxy	178	178	/var/lib/myproxy		/sbin/nologin	myproxy-server
