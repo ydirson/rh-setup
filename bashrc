@@ -19,7 +19,7 @@ if [ "$PS1" ]; then
           PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
       fi
       ;;
-    screen)
+    screen*)
       if [ -e /etc/sysconfig/bash-prompt-screen ]; then
           PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
       else
