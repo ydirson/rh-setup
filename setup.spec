@@ -97,6 +97,8 @@ end
 - assign 166:166 uidgid pair for ceilometer (#923891)
 - change 187:187 reservation from openstack-heat
   to just heat(#923858)
+- longer shell names support caused by UsrMove to
+  the /etc/shells (#922527)
 
 * Tue Mar 05 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.66-1
 - assign :190 gid for systemd-journal (#918120)
