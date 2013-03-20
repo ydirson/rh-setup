@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.66
+Version: 2.8.67
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,11 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Wed Mar 20 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.67-1
+- assign 166:166 uidgid pair for ceilometer (#923891)
+- change 187:187 reservation from openstack-heat
+  to just heat(#923858)
+
 * Tue Mar 05 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.66-1
 - assign :190 gid for systemd-journal (#918120)
 - assign 191:191 uidgid pair for systemd-journal-gateway (#918120)

@@ -130,6 +130,7 @@ nova	162	162	/var/lib/nova		/sbin/nologin	openstack-nova
 keystone	163	163	/var/lib/keystone		/sbin/nologin	openstack-keystone
 quantum	164	164	/var/lib/quantum		/sbin/nologin	openstack-quantum
 cinder	165	165	/var/lib/cinder		/sbin/nologin	openstack-cinder
+ceilometer	166	166	/var/lib/ceilometer		/sbin/nologin	openstack-ceilometer
 avahi-autoipd	170	170	/var/lib/avahi-autoipd		/sbin/nologin	avahi
 pulse	171	171	/var/run/pulse		/sbin/nologin	pulseaudio
 rtkit	172	172	/proc		/sbin/nologin	rtkit
@@ -148,7 +149,7 @@ mongodb	184	184	/var/lib/mongodb		/sbin/nologin	mongodb
 jboss-as	185	185	/usr/share/jboss-as		/sbin/nologin	jboss-as
 jbosson-agent	186	-	/		/sbin/nologin	jboss-on-agent
 jbosson	-	186	-		-	jboss-on-agent
-openstack-heat	187	187	/var/lib/heat		/sbin/nologin	heat
+heat	187	187	/var/lib/heat		/sbin/nologin	heat
 haproxy	188	188	/var/lib/haproxy		/sbin/nologin	haproxy
 hacluster	189	-	/		/sbin/nologin	pacemaker
 haclient	-	189	-		-	pacemaker
