@@ -9,13 +9,14 @@ lp::7:
 mem::8:
 kmem::9:
 wheel::10:
+cdrom/::11:
 mail::12:
-uucp::14:
 man::15:
+dialout::18:
+floppy::19:
 games::20:
-gopher::30:
+tape::30:
 video::39:
-dip::40:
 ftp::50:
 lock::54:
 audio::63:

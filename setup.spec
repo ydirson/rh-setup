@@ -99,6 +99,13 @@ end
   to just heat(#923858)
 - longer shell names support caused by UsrMove to
   the /etc/shells (#922527)
+- drop gopher (uid 13, gid 30) from groups created by default
+  -> dropped completely - no gopher server in Fedora (#918206)
+- drop dip (gid 40) from groups created by default
+  -> moved to ppp (#918206)
+- drop uucp (uidgid 14) from groups created by default
+  -> moved to uucp (#912806)
+- create cdrom, tape, dialout, floppy groups in setup(#919285)
 
 * Tue Mar 05 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.66-1
 - assign :190 gid for systemd-journal (#918120)
