@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.67
+Version: 2.8.68
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -93,6 +93,10 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Sun Apr 14 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.68-1
+- assign gid :135 for mock (#928063)
+- update /etc/services to latest IANA reservations
+
 * Wed Mar 20 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.67-1
 - assign 166:166 uidgid pair for ceilometer (#923891)
 - change 187:187 reservation from openstack-heat

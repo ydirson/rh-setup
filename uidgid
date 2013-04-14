@@ -118,6 +118,7 @@ vhostmd	112	112	/usr/share/vhostmd		/sbin/nologin	vhostmd
 usbmuxd	113	113	/		/sbin/nologin	usbmuxd
 bacula	133	133	/var/spool/bacula		/sbin/nologin	bacula
 cimsrvr	134	134	/		/sbin/nologin	tog-pegasus-libs
+mock	-	135	/		-	mock
 ricci	140	140	/var/lib/ricci		/sbin/nologin	ricci
 luci	141	141	/var/lib/luci		/sbin/nologin	luci
 stap-server	155	155	/var/lib/stap-server		/sbin/nologin	systemtap
