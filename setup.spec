@@ -109,7 +109,7 @@ end
 - drop dip (gid 40) from groups created by default
   -> moved to ppp (#918206)
 - drop uucp (uidgid 14) from groups created by default
-  -> moved to uucp (#912806)
+  -> moved to uucp (#918206)
 - create cdrom, tape, dialout, floppy groups in setup(#919285)
 
 * Tue Mar 05 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.66-1
