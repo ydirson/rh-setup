@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.69
+Version: 2.8.70
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -90,6 +90,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Tue May 14 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.70-1
+- fix typo in cdrom default group (#962486)
+
 * Thu Apr 18 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.69-1
 - remove the rpmlib(X-CheckUnifiedSystemdir) requirement
   hack - no longer required

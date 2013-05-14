@@ -9,7 +9,7 @@ lp::7:
 mem::8:
 kmem::9:
 wheel::10:
-cdrom/::11:
+cdrom::11:
 mail::12:
 man::15:
 dialout::18:
