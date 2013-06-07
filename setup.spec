@@ -92,6 +92,7 @@ end
 %changelog
 * Fri Jun 07 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.71-1
 - fix escape codes for screen (#969429)
+- handle vte terminals in bashrc (#924275)
 
 * Tue May 14 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.70-1
 - fix typo in cdrom default group (#962486)

@@ -12,9 +12,11 @@
 if [ "$PS1" ]; then
   if [ -z "$PROMPT_COMMAND" ]; then
     case $TERM in
-    xterm*)
+    xterm*|vte*)
       if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
           PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
+      elif [ "${VTE_VERSION:-0}" -ge 3405 ]; then
+          PROMPT_COMMAND="__vte_prompt_command"
       else
           PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
       fi
