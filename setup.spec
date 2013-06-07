@@ -1,6 +1,6 @@
 Summary: A set of system configuration and setup files
 Name: setup
-Version: 2.8.70
+Version: 2.8.71
 Release: 1%{?dist}
 License: Public Domain
 Group: System Environment/Base
@@ -90,6 +90,9 @@ end
 %ghost %verify(not md5 size mtime) %config(noreplace,missingok) /etc/fstab
 
 %changelog
+* Fri Jun 07 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.71-1
+- fix escape codes for screen (#969429)
+
 * Tue May 14 2013 Ondrej Vasik <ovasik@redhat.com> 2.8.70-1
 - fix typo in cdrom default group (#962486)
 

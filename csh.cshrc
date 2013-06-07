@@ -43,7 +43,7 @@ if ($?prompt) then
         breaksw
       case screen:
         if ($?tcsh) then
-          set prompt='%{\033_%n@%m:%c\033\\%}[%n@%m %c]%# '
+          set prompt='%{\033k%n@%m:%c\033\\%}[%n@%m %c]%# '
         endif
         breaksw
       default:
