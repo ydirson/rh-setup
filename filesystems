@@ -1,3 +1,4 @@
+xfs
 ext4
 ext3
 ext2
@@ -7,3 +8,4 @@ iso9660
 vfat
 hfs
 hfsplus
+*
