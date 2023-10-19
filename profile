@@ -62,7 +62,7 @@ else
     umask 022
 fi
 
-for i in /etc/profile.d/*.sh ; do
+for i in /etc/profile.d/*.sh /etc/profile.d/sh.local ; do
     if [ -r "$i" ]; then
         if [ "${-#*i}" != "$-" ]; then 
             . "$i"
