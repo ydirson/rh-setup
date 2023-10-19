@@ -73,6 +73,7 @@ if ! shopt -q login_shell ; then # We're not a login shell
        umask 022
     fi
 
+    SHELL=/bin/bash
     # Only display echos from profile.d scripts if we are no login shell
     # and interactive - otherwise just process them to set envvars
     for i in /etc/profile.d/*.sh; do
