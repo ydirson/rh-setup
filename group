@@ -26,3 +26,4 @@ users::100:
 nagios::201:nrpe
 nrpe::202:
 telemetry::203:
+certusers::204:nrpe

@@ -166,6 +166,7 @@ listar	?	?	?		?	listar
 ngios	201	201	/var/spool/nagios	/sbin/nologin	setup
 nrpe	202	202	/var/run/nrpe	/sbin/nologin	setup
 telemetry	203	203	/var/telemetry	/sbin/nologin	setup
+certusers	-	204	-	-	setup
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
 
 # Note: nfsnobody is 4294967294 on 64-bit platforms (-2)
