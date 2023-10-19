@@ -163,6 +163,8 @@ systemd-network	192	192	/		/sbin/nologin	systemd
 systemd-resolve	193	193	/		/sbin/nologin	systemd
 gnats	?	?	?		?	gnats, gnats-db
 listar	?	?	?		?	listar
+ngios	201	201	/var/spool/nagios	/sbin/nologin	setup
+nrpe	202	202	/var/run/nrpe	/sbin/nologin	setup
 nfsnobody	65534	65534	/var/lib/nfs		/sbin/nologin	nfs-utils
 
 # Note: nfsnobody is 4294967294 on 64-bit platforms (-2)
