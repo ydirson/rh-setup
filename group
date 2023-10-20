@@ -15,6 +15,7 @@ man::15:
 dialout::18:
 floppy::19:
 games::20:
+utmp::22:
 tape::33:
 video::39:
 ftp::50:
