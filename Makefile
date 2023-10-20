@@ -7,8 +7,6 @@ check:
 	@echo Sanity checking selected files....
 	bash -n bashrc
 	bash -n profile
-	tcsh -f csh.cshrc
-	tcsh -f csh.login
 	./uidgidlint ./uidgid
 	./serviceslint ./services
 
